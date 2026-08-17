@@ -1,0 +1,66 @@
+<!--
+  CMS MAPPING
+  - Assistant labels, disclaimer, quick replies, and fallback response → ACF Options Page: Support Assistant
+  - Quick-reply destinations → WordPress section URLs or support platform routes
+  - Panel layout, accessibility behavior, and local prototype replies → Fixed theme component behavior
+  - Production message handling → Replace local prototype adapter with approved support service
+-->
+<div class="chatbot-widget" data-chatbot>
+  <button
+    class="chatbot-trigger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="chatbot-panel"
+    data-chatbot-trigger
+  >
+    <span class="chatbot-hint" role="status" data-chatbot-hint></span>
+    <span class="chatbot-trigger__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 5.75h13v9.5h-7.2L7.2 18.4v-3.15H5.5v-9.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+        <path d="M8.5 9.1h7M8.5 12h4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      </svg>
+    </span>
+    <span class="sr-only" data-chatbot-trigger-label></span>
+  </button>
+
+  <section
+    class="chatbot-panel"
+    id="chatbot-panel"
+    role="dialog"
+    aria-modal="false"
+    aria-labelledby="chatbot-title"
+    hidden
+    data-chatbot-panel
+  >
+    <header class="chatbot-panel__header">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2.5">
+          <span class="chatbot-panel__calibration" aria-hidden="true"></span>
+          <p class="chatbot-panel__status" data-chatbot-status></p>
+        </div>
+        <h2 class="chatbot-panel__title font-heading" id="chatbot-title" data-chatbot-title></h2>
+      </div>
+      <button class="chatbot-close" type="button" data-chatbot-close>
+        <span aria-hidden="true">×</span>
+        <span class="sr-only" data-chatbot-close-label></span>
+      </button>
+    </header>
+
+    <div class="chatbot-panel__body" data-chatbot-body>
+      <div class="chatbot-messages" aria-live="polite" aria-relevant="additions" data-chatbot-messages></div>
+      <div class="chatbot-quick-replies" data-chatbot-quick-replies></div>
+    </div>
+
+    <form class="chatbot-composer" data-chatbot-form>
+      <label class="sr-only" for="chatbot-input" data-chatbot-input-label></label>
+      <input class="chatbot-input" id="chatbot-input" type="text" maxlength="240" autocomplete="off" data-chatbot-input>
+      <button class="chatbot-send" type="submit" data-chatbot-send>
+        <span class="sr-only" data-chatbot-send-label></span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m5 12 13-6-3.5 12-3-4-4 1.5L5 12Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+          <path d="m11.5 14 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+      </button>
+    </form>
+  </section>
+</div>

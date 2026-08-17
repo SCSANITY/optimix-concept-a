@@ -726,6 +726,49 @@
     ],
     "locationsUrl": "https://www.optimix.com.hk/contact"
   },
+  "supportAssistant": {
+    "title": "Optimix Technical Assistant",
+    "statusLabel": "Prototype assistant",
+    "triggerLabel": "Open technical assistant",
+    "closeLabel": "Close technical assistant",
+    "hint": "Need technical help?",
+    "welcome": "Welcome. How can we help you explore Optimix today?",
+    "disclaimer": "This is a demonstration assistant. Automated responses are for prototype testing only.",
+    "inputLabel": "Type a message",
+    "inputPlaceholder": "Ask a test question…",
+    "sendLabel": "Send message",
+    "fallbackResponse": "Thanks for your message. This prototype is not connected to a live support service yet.",
+    "quickReplies": [
+      {
+        "id": "products",
+        "label": "Explore product categories",
+        "response": "Optimix products are organised into nine construction material categories on this page.",
+        "actionLabel": "View Products",
+        "actionHref": "#products"
+      },
+      {
+        "id": "systems",
+        "label": "View system solutions",
+        "response": "Review the current system solution index. Approved technical drawings will be added when supplied.",
+        "actionLabel": "View Systems",
+        "actionHref": "#systems"
+      },
+      {
+        "id": "documents",
+        "label": "Find technical documents",
+        "response": "Technical data sheets for the featured products are available from their product entries.",
+        "actionLabel": "View Downloads",
+        "actionHref": "#downloads"
+      },
+      {
+        "id": "contact",
+        "label": "Contact Optimix",
+        "response": "For product, specification and technical enquiries, use the verified contact details in the page footer.",
+        "actionLabel": "View Contact Details",
+        "actionHref": "#contact"
+      }
+    ]
+  },
   "footer": {
     "eyebrow": "Project Enquiries",
     "title": "Discuss your next project with Optimix.",

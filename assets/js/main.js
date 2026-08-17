@@ -9,6 +9,7 @@ import { initProjects } from './sections/projects.js';
 import { initDownloads } from './sections/downloads.js';
 import { initNews } from './sections/news.js';
 import { initFooter } from './sections/footer.js';
+import { initChatbot } from './sections/chatbot.js';
 import { initReveal } from './reveal.js';
 import { initBrandMotion } from './brand-motion.js';
 
@@ -22,5 +23,6 @@ initProjects();
 initDownloads();
 initNews();
 initFooter();
+initChatbot();
 initBrandMotion();
 initReveal();
