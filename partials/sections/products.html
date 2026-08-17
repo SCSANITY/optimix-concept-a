@@ -1,0 +1,57 @@
+<!--
+  CMS MAPPING
+  - Section and featured-product headings → ACF Options Page: Homepage Products
+  - Product category index → CPT: product_category (fields: name, tagline, product_count)
+  - Featured technical products → CPT: product (fields: code, name, standard, description, highlights, featured_image, data_sheet)
+  - Empty tagline/count values remain hidden until verified content is supplied
+  - Taxonomy board, local progress, and responsive layout → Fixed theme template behavior
+-->
+<section class="scroll-mt-24 overflow-hidden bg-paper py-20 sm:py-24 lg:py-32" id="products" data-products>
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16" data-reveal>
+      <div class="lg:col-span-7">
+        <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+          <span class="font-heading text-brand-red">03</span>
+          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
+          <span data-products-eyebrow></span>
+        </p>
+        <h2 class="max-w-[720px] font-heading text-[2.125rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.25rem]" data-products-title></h2>
+      </div>
+      <p class="max-w-[520px] text-lg leading-[1.7] text-ink/70 lg:col-span-5" data-products-description></p>
+    </div>
+  </div>
+
+  <div class="product-index-shell relative mt-14 bg-brand-blue text-white lg:mt-20" data-product-index data-reveal>
+    <div class="product-index-scan absolute inset-y-0 left-0 w-px" aria-hidden="true"></div>
+    <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+      <div class="flex items-center justify-between border-b border-white/25 py-5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/65">
+        <span data-product-index-label></span>
+        <span class="font-heading" data-product-index-count></span>
+      </div>
+      <div class="product-index-grid grid sm:grid-cols-2 lg:grid-cols-3" role="list" data-product-list></div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="mt-20 sm:mt-24 lg:mt-32" data-reveal>
+      <div class="grid gap-7 lg:grid-cols-12 lg:items-end lg:gap-16">
+        <div class="lg:col-span-7">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue" data-featured-products-eyebrow></p>
+          <h3 class="max-w-[720px] font-heading text-[1.875rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-4xl lg:text-[2.75rem]" data-featured-products-title></h3>
+        </div>
+        <p class="max-w-[520px] text-base leading-[1.7] text-ink/70 sm:text-lg lg:col-span-5" data-featured-products-description></p>
+      </div>
+    </div>
+
+    <div class="mt-10 lg:mt-14 lg:grid lg:grid-cols-[2.75rem_minmax(0,1fr)] lg:gap-7">
+      <div class="hidden lg:block" aria-hidden="true">
+        <div class="featured-progress sticky top-32">
+          <span class="featured-progress__current font-heading" data-featured-progress-current>01</span>
+          <span class="featured-progress__track"><span class="featured-progress__fill" data-featured-progress-fill></span></span>
+          <span class="featured-progress__total font-heading" data-featured-progress-total>03</span>
+        </div>
+      </div>
+      <div class="border-b border-ink/20" data-featured-product-list></div>
+    </div>
+  </div>
+</section>

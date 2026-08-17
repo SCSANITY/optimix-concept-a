@@ -1,0 +1,76 @@
+<!--
+  CMS MAPPING
+  - Eyebrow, title, description, and CTA labels/links → ACF Options Page: Homepage Hero
+  - Key figures → ACF Repeater: Company Statistics
+  - Video and poster URLs → ACF File/Image fields: Homepage Hero
+  - Particle field, chromatic veil, material scan, and scroll response → Fixed theme template behavior
+
+  PRODUCTION MEDIA REQUIREMENTS
+  - Replace the prototype Pexels footage with approved Optimix footage.
+  - Target: landscape 16:9, muted, no audio track, 8–15 second seamless loop, under 5 MB.
+  - Provide a matching poster frame for reduced-motion and data-saving modes.
+-->
+<section
+  class="hero-shell relative isolate -mt-[72px] flex min-h-[calc(100svh-2rem)] flex-col overflow-hidden bg-deep-blue pt-[72px] text-white lg:-mt-[88px] lg:pt-[88px]"
+  id="hero"
+  data-hero
+>
+  <video
+    class="hero-media pointer-events-none absolute inset-0 h-full w-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="none"
+    poster="./media/hero/material-mixing-placeholder-poster.png"
+    tabindex="-1"
+    aria-hidden="true"
+    data-hero-video
+  ></video>
+
+  <div class="hero-video-grade pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="hero-pointer-glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="hero-chromatic-veil pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="hero-text-shade pointer-events-none absolute inset-0" aria-hidden="true"></div>
+
+  <canvas class="pointer-events-none absolute inset-0 z-10 h-full w-full" aria-hidden="true" data-particle-canvas></canvas>
+  <span class="pointer-events-none absolute h-px w-px bg-brand-blue opacity-0" aria-hidden="true" data-particle-blue></span>
+  <span class="pointer-events-none absolute h-px w-px bg-brand-red opacity-0" aria-hidden="true" data-particle-red></span>
+  <span class="hero-material-scan pointer-events-none absolute inset-y-[-20%] left-0 z-[15] w-px bg-brand-red" aria-hidden="true"></span>
+
+  <div class="relative z-20 mx-auto flex w-full max-w-site flex-1 flex-col px-5 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12 lg:px-10 lg:pt-16">
+    <div class="flex flex-1 items-center py-10 lg:py-14">
+      <div class="min-w-0 max-w-[920px]">
+        <p class="mb-6 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.17em] text-white/75 sm:text-xs">
+          <span class="h-px w-8 bg-brand-red" aria-hidden="true"></span>
+          <span data-hero-eyebrow></span>
+        </p>
+
+        <h1
+          class="font-heading text-[2.5rem] font-extrabold leading-[1.04] tracking-[-0.03em] text-white sm:text-[3.75rem] lg:text-[4.5rem] lg:leading-[0.98]"
+          data-hero-title
+        ></h1>
+
+        <p class="mt-7 max-w-[620px] text-lg leading-[1.6] text-white/80 sm:text-xl" data-hero-description></p>
+
+        <div class="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+          <a
+            class="inline-flex min-h-12 items-center justify-center rounded-brand bg-brand-red px-6 text-sm font-semibold text-white transition-[background-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-brand-red/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-deep-blue"
+            data-hero-primary-cta
+          ></a>
+          <a
+            class="group inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-white underline-offset-8 transition-colors duration-300 hover:text-white/75 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-deep-blue"
+            data-hero-secondary-cta
+          >
+            <span data-hero-secondary-label></span>
+            <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <dl class="mb-5 grid grid-cols-3 border-t border-white/25 sm:mb-7" data-hero-stats></dl>
+  </div>
+
+  <div class="hero-paper-seam pointer-events-none absolute inset-x-0 bottom-0 z-30 h-10 sm:h-14" aria-hidden="true"></div>
+</section>

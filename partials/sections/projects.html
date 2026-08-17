@@ -1,0 +1,71 @@
+<!--
+  CMS MAPPING
+  - Section copy, proof labels, filters, and casebook → ACF Options Page: Homepage Projects
+  - Project portfolio → CPT: project
+  - Project fields → English name, Chinese source name, region, location, supply period, supplied products, featured image, featured flag
+  - Region filters → Taxonomy: project_region
+  - Proof figures → Computed from the project query and project_region terms
+  - English names are working translations pending Optimix client approval
+  - Grid, filtering, initial display limit, and responsive behavior → Fixed theme template behavior
+-->
+<section class="scroll-mt-24 bg-mist py-20 sm:py-24 lg:py-32" id="projects" data-projects>
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16" data-reveal>
+      <div class="lg:col-span-7">
+        <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+          <span class="font-heading text-brand-red">05</span>
+          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
+          <span data-projects-eyebrow></span>
+        </p>
+        <h2
+          class="max-w-[760px] font-heading text-[2.125rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.25rem]"
+          data-projects-title
+        ></h2>
+      </div>
+      <p class="max-w-[520px] text-lg leading-[1.7] text-ink/70 lg:col-span-5" data-projects-description></p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-3 border-y border-ink/15 lg:mt-20 lg:max-w-[820px]" data-reveal>
+      <div class="py-6 pr-3 sm:pr-8">
+        <p class="font-heading text-3xl font-bold tracking-[-0.03em] text-brand-blue sm:text-4xl" data-project-count></p>
+        <p class="mt-2 text-[9px] font-semibold uppercase leading-[1.45] tracking-[0.12em] text-ink/50 sm:text-[11px]" data-project-count-label></p>
+      </div>
+      <div class="border-l border-ink/15 px-3 py-6 sm:px-8">
+        <p class="font-heading text-3xl font-bold tracking-[-0.03em] text-brand-blue sm:text-4xl" data-project-hong-kong-count></p>
+        <p class="mt-2 text-[9px] font-semibold uppercase leading-[1.45] tracking-[0.12em] text-ink/50 sm:text-[11px]" data-project-hong-kong-label></p>
+      </div>
+      <div class="border-l border-ink/15 py-6 pl-3 sm:pl-8">
+        <p class="font-heading text-3xl font-bold tracking-[-0.03em] text-brand-blue sm:text-4xl" data-project-mainland-count></p>
+        <p class="mt-2 text-[9px] font-semibold uppercase leading-[1.45] tracking-[0.12em] text-ink/50 sm:text-[11px]" data-project-mainland-label></p>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-6 border-b border-ink/15 pb-6 lg:mt-16 lg:flex-row lg:items-end lg:justify-between" data-reveal>
+      <div>
+        <p class="mb-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink/45" data-project-filter-label></p>
+        <div class="flex flex-wrap gap-2" data-project-filters></div>
+      </div>
+      <a
+        class="inline-flex min-h-11 w-fit items-center gap-3 border-b border-brand-blue pb-1 text-sm font-semibold text-brand-blue transition-colors hover:border-brand-red hover:text-brand-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4 focus-visible:ring-offset-mist"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-project-casebook
+      >
+        <span data-project-casebook-label></span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <p class="mt-5 text-xs font-medium text-ink/50" aria-live="polite" data-project-status></p>
+    <div class="mt-9 grid gap-x-6 gap-y-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 xl:gap-y-16" data-project-list></div>
+
+    <div class="mt-14 flex justify-center" data-project-toggle-wrap>
+      <button
+        class="min-h-12 border border-brand-blue px-7 py-3 text-sm font-semibold text-brand-blue transition-colors hover:bg-brand-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4 focus-visible:ring-offset-mist"
+        type="button"
+        aria-expanded="false"
+        data-project-toggle
+      ></button>
+    </div>
+  </div>
+</section>

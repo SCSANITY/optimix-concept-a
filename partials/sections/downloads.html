@@ -1,0 +1,51 @@
+<!--
+  CMS MAPPING
+  - Eyebrow, title, description, portal copy, CTA, and resource labels → ACF Options Page: Homepage Downloads
+  - Portal URL → Theme option; currently points to the verified existing member login
+  - Future document records → CPT: technical_document, protected by the chosen membership/access workflow
+  - Layout, numbering, document motif, and responsive behavior → Fixed theme template behavior
+-->
+<section class="scroll-mt-24 bg-paper py-20 sm:py-24 lg:py-32" id="downloads" data-downloads>
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16" data-reveal>
+      <div class="lg:col-span-7">
+        <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+          <span class="font-heading text-brand-red">06</span>
+          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
+          <span data-downloads-eyebrow></span>
+        </p>
+        <h2
+          class="max-w-[760px] font-heading text-[2.125rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.25rem]"
+          data-downloads-title
+        ></h2>
+      </div>
+      <p class="max-w-[520px] text-lg leading-[1.7] text-ink/70 lg:col-span-5" data-downloads-description></p>
+    </div>
+
+    <div class="mt-14 grid border-y border-ink/15 lg:mt-20 lg:grid-cols-12" data-reveal>
+      <div class="py-8 lg:col-span-5 lg:py-10 lg:pr-12">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/45" data-downloads-access-label></p>
+        <ol class="mt-8 border-t border-ink/15" data-resource-types></ol>
+      </div>
+
+      <div class="border-t border-ink/15 bg-mist px-6 py-9 sm:px-9 sm:py-11 lg:col-span-7 lg:border-l lg:border-t-0 lg:px-12 lg:py-12">
+        <svg class="h-12 w-12 text-brand-blue" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M11 6h18l8 8v28H11V6Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M29 6v9h8M17 23h14M17 29h14M17 35h9" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 10H5v35h28v-3" stroke="currentColor" stroke-width="2" opacity="0.35"/>
+        </svg>
+        <h3 class="mt-8 max-w-[520px] font-heading text-3xl font-bold leading-[1.15] tracking-[-0.025em] text-ink sm:text-4xl" data-downloads-portal-title></h3>
+        <p class="mt-5 max-w-[560px] text-base leading-[1.7] text-ink/65 sm:text-lg" data-downloads-portal-description></p>
+        <a
+          class="mt-8 inline-flex min-h-12 items-center gap-3 rounded-brand bg-brand-red px-6 text-sm font-semibold text-white transition-[background-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-brand-red/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-downloads-cta
+        >
+          <span data-downloads-cta-label></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

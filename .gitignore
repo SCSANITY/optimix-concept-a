@@ -1,0 +1,12 @@
+node_modules/
+dist/
+
+# Local visual QA captures
+/*.png
+
+# Local and editor artifacts
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

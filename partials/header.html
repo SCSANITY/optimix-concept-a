@@ -1,0 +1,88 @@
+<!--
+  CMS MAPPING
+  - Concept disclaimer → Fixed theme template content
+  - Logo → WordPress custom logo (temporary source: official supplied PNG)
+  - Navigation items → WordPress menu: Primary Navigation
+  - Language label → Multilingual plugin switcher (placeholder only in Concept A)
+  - Contact CTA label/link → ACF Options Page
+  - Layout, sticky behavior, and mobile menu → Fixed theme template behavior
+-->
+<div class="bg-deep-blue px-4 py-2 text-center text-[11px] font-medium tracking-[0.05em] text-white sm:text-xs">
+  Design Concept — Placeholder content and imagery. Not a final website.
+</div>
+
+<header
+  class="site-header is-over-hero sticky top-0 z-50 border-b"
+  data-site-header
+>
+  <div class="mx-auto flex h-[72px] max-w-site items-center justify-between px-5 sm:px-8 lg:h-[88px] lg:px-10" data-header-inner>
+    <a
+      class="brand-dock flex shrink-0 items-center px-2.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4"
+      href="#hero"
+      aria-label="Optimix home"
+    >
+      <!-- Temporary full stacked lockup. Replace only with an approved official horizontal logo. -->
+      <img
+        class="h-[52px] w-auto object-contain lg:h-[64px]"
+        src="./assets/media/optimix-logo-official.png"
+        width="900"
+        height="600"
+        alt="Optimix"
+        data-site-logo
+      >
+    </a>
+
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+      <div class="flex items-center gap-7" data-desktop-navigation></div>
+      <span
+        class="border-l border-ink/15 pl-7 text-sm font-semibold tracking-[0.08em] text-ink"
+        aria-label="Language selector placeholder"
+        data-header-foreground
+      >
+        EN <span class="font-normal text-ink/45">/ 繁</span>
+      </span>
+      <a
+        class="inline-flex min-h-11 items-center justify-center rounded-brand bg-brand-red px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-brand-red/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-4"
+        data-contact-link
+      ></a>
+    </nav>
+
+    <button
+      class="inline-flex h-11 w-11 items-center justify-center rounded-brand border border-ink/15 text-ink transition-colors hover:border-brand-blue hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 lg:hidden"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+      aria-label="Open navigation"
+      data-menu-toggle
+      data-header-foreground
+    >
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path data-menu-icon-open d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path data-menu-icon-close class="hidden" d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <span class="mobile-brand-progress absolute inset-x-0 bottom-0 h-px lg:hidden" aria-hidden="true">
+    <span class="block h-full origin-left bg-brand-red" data-mobile-brand-progress></span>
+  </span>
+
+  <div
+    class="hidden border-t border-ink/10 bg-paper px-5 py-5 shadow-soft sm:px-8 lg:hidden"
+    id="mobile-navigation"
+    data-mobile-menu
+  >
+    <nav class="mx-auto flex max-w-site flex-col" aria-label="Mobile navigation">
+      <div class="flex flex-col" data-mobile-navigation></div>
+      <div class="mt-4 flex items-center justify-between border-t border-ink/10 pt-5">
+        <span class="text-sm font-semibold tracking-[0.08em] text-ink">
+          EN <span class="font-normal text-ink/45">/ 繁</span>
+        </span>
+        <a
+          class="inline-flex min-h-11 items-center justify-center rounded-brand bg-brand-red px-5 text-sm font-semibold text-white"
+          data-mobile-contact-link
+        ></a>
+      </div>
+    </nav>
+  </div>
+</header>

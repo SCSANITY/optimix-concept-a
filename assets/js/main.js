@@ -1,0 +1,26 @@
+import '../css/main.css';
+import { initHeader } from './sections/header.js';
+import { initHero } from './sections/hero.js';
+import { initAbout } from './sections/about.js';
+import { initSystems } from './sections/systems.js';
+import { initProducts } from './sections/products.js';
+import { initCertifications } from './sections/certifications.js';
+import { initProjects } from './sections/projects.js';
+import { initDownloads } from './sections/downloads.js';
+import { initNews } from './sections/news.js';
+import { initFooter } from './sections/footer.js';
+import { initReveal } from './reveal.js';
+import { initBrandMotion } from './brand-motion.js';
+
+initHeader();
+initHero();
+initAbout();
+initSystems();
+initProducts();
+initCertifications();
+initProjects();
+initDownloads();
+initNews();
+initFooter();
+initBrandMotion();
+initReveal();

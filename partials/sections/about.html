@@ -1,0 +1,42 @@
+<!--
+  CMS MAPPING
+  - Eyebrow, title, description, and profile label → ACF Options Page: Homepage Corporate
+  - Manufacturer facts → ACF Repeater: Corporate Profile Facts
+  - Project proof figure → Company Statistics entry selected by slug
+  - Layout, rules, numbering, and responsive behavior → Fixed theme template behavior
+-->
+<section class="scroll-mt-24 bg-paper py-20 sm:py-24 lg:py-32" id="about" data-about>
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-6" data-reveal>
+        <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
+          <span class="font-heading text-brand-red">01</span>
+          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
+          <span data-about-eyebrow></span>
+        </p>
+        <h2
+          class="max-w-[650px] font-heading text-[2.125rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.25rem]"
+          data-about-title
+        ></h2>
+      </div>
+
+      <div class="lg:col-span-6 lg:pt-12" data-reveal>
+        <p class="max-w-[610px] text-lg leading-[1.7] text-ink/70 sm:text-xl" data-about-description></p>
+      </div>
+    </div>
+
+    <div class="mt-14 border-y border-ink/15 lg:mt-20" data-reveal>
+      <div class="grid lg:grid-cols-12">
+        <div class="border-b border-ink/15 py-8 lg:col-span-3 lg:border-b-0 lg:border-r lg:py-10">
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45" data-about-profile-label></p>
+          <div class="mt-10 flex items-end gap-3 lg:mt-16">
+            <strong class="font-heading text-5xl font-bold tracking-[-0.04em] text-brand-blue sm:text-6xl" data-about-proof-value></strong>
+            <span class="max-w-28 pb-1 text-xs font-semibold uppercase leading-[1.4] tracking-[0.08em] text-ink/55" data-about-proof-label></span>
+          </div>
+        </div>
+
+        <dl class="grid sm:grid-cols-2 lg:col-span-9" data-about-facts></dl>
+      </div>
+    </div>
+  </div>
+</section>

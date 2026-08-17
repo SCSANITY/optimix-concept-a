@@ -1,0 +1,745 @@
+{
+  "site": {
+    "name": "Optimix",
+    "legalName": "Optimix (Hong Kong) Limited",
+    "foundedYear": 2000
+  },
+  "header": {
+    "navigation": [
+      { "label": "Systems", "href": "#systems" },
+      { "label": "Products", "href": "#products" },
+      { "label": "Credentials", "href": "#certifications" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "News", "href": "#news" }
+    ],
+    "contactCta": {
+      "label": "Contact Us"
+    }
+  },
+  "hero": {
+    "eyebrow": "Technical Dry Mortar · Hong Kong Since 2000",
+    "titleLines": [
+      "Material systems for",
+      "landmark construction."
+    ],
+    "description": "Optimix researches and manufactures technical dry mortar for demanding building projects.",
+    "media": {
+      "videoUrl": "./media/hero/material-mixing-placeholder-pexels-6473933.mp4",
+      "posterUrl": "./media/hero/material-mixing-placeholder-poster.png",
+      "placeholder": true
+    },
+    "primaryCta": {
+      "label": "Explore Our Systems",
+      "href": "#systems"
+    },
+    "secondaryCta": {
+      "label": "View Featured Projects",
+      "href": "#projects"
+    },
+    "statSlugs": ["experience", "capacity", "certification"]
+  },
+  "companyStats": [
+    { "slug": "experience", "value": "20+", "label": "Years Experience" },
+    { "slug": "capacity", "value": "200k", "label": "Tons Annual Capacity" },
+    { "slug": "certification", "value": "ISO", "label": "9001 & 14001 Certified" },
+    { "slug": "projects", "value": "100+", "label": "Projects Completed" }
+  ],
+  "corporate": {
+    "eyebrow": "Corporate Introduction",
+    "title": "Technical materials engineered for Hong Kong construction.",
+    "description": "Founded in 2000, Optimix researches and manufactures technical dry mortar systems for demanding construction applications.",
+    "profileLabel": "Manufacturer Profile",
+    "facts": [
+      { "label": "Established", "value": "2000 · Hong Kong" },
+      { "label": "Core Expertise", "value": "Technical Dry Mortar" },
+      { "label": "Capabilities", "value": "Research & Manufacturing" },
+      { "label": "Standards", "value": "ISO 9001 & 14001" }
+    ],
+    "proofStatSlug": "projects"
+  },
+  "systemsSection": {
+    "eyebrow": "System Solutions",
+    "title": "Performance is built as a system.",
+    "description": "Explore Optimix material systems for wall, rooftop and flooring applications.",
+    "drawingLabel": "Technical Section",
+    "drawingPlaceholder": "Approved system drawing required"
+  },
+  "systems": [
+    { "slug": "internal-external-wall-tiling", "name": "Internal / External Wall Tiling System", "description": null, "layers": [] },
+    { "slug": "external-wall-waterproofing-rendering-tiling", "name": "External Wall Waterproofing Rendering & Tiling System", "description": null, "layers": [] },
+    { "slug": "internal-wall-painting", "name": "Internal Wall Painting System", "description": null, "layers": [] },
+    { "slug": "rooftop-waterproofing-tiling", "name": "Rooftop Waterproofing & Tiling System", "description": null, "layers": [] },
+    { "slug": "self-leveling-overlayment", "name": "Self-Leveling Overlayment System", "description": null, "layers": [] }
+  ],
+  "productCategories": [
+    { "slug": "plastering", "name": "Plastering", "tagline": null, "productCount": null },
+    { "slug": "tiling", "name": "Tiling", "tagline": null, "productCount": null },
+    { "slug": "waterproofing", "name": "Waterproofing", "tagline": null, "productCount": null },
+    { "slug": "grouting", "name": "Grouting", "tagline": null, "productCount": null },
+    { "slug": "repairing", "name": "Repairing", "tagline": null, "productCount": null },
+    { "slug": "flooring", "name": "Flooring", "tagline": null, "productCount": null },
+    { "slug": "concreting", "name": "Concreting", "tagline": null, "productCount": null },
+    { "slug": "emulsion", "name": "Emulsion", "tagline": null, "productCount": null },
+    { "slug": "eco-build", "name": "Eco Build", "tagline": null, "productCount": null }
+  ],
+  "productsSection": {
+    "eyebrow": "Product Categories",
+    "title": "Materials across critical construction layers.",
+    "description": "Nine product categories support construction, finishing, protection and repair applications.",
+    "itemLabel": "Product Category",
+    "featuredEyebrow": "Featured Technical Products",
+    "featuredTitle": "Three products. One complete tiling system.",
+    "featuredDescription": "Specified adhesives and grout for general tiling, demanding installations and durable joint finishing.",
+    "dataSheetLabel": "View Data Sheet"
+  },
+  "featuredProducts": [
+    {
+      "slug": "ta313",
+      "code": "TA313",
+      "name": "Tile Adhesive (Semi-Flexible)",
+      "standard": "EN 12004 C1TE",
+      "description": "A polymer-modified cementitious adhesive for fixing interior and exterior ceramic tiles, available in grey or white.",
+      "highlights": [
+        "General interior and exterior tiling",
+        "Extended open time and slight flexibility",
+        "Suitable for MiC factory and site works"
+      ],
+      "imageUrl": "./media/products/optimix-ta313-application.jpeg",
+      "imageAlt": "TA313 tile adhesive being used to install wall tiles",
+      "dataSheetUrl": "./documents/products/optimix-ta313-data-sheet-en.pdf"
+    },
+    {
+      "slug": "ta328",
+      "code": "TA328",
+      "name": "Tile Adhesive (Flexible)",
+      "standard": "EN 12004 C2TE S1",
+      "description": "A high-polymer, high-strength flexible adhesive developed for interior and exterior wall and floor tile installations.",
+      "highlights": [
+        "Designed for large and heavy tiles",
+        "High adhesive strength and flexibility",
+        "Suitable for MiC factory and site works"
+      ],
+      "imageUrl": "./media/products/optimix-ta328-application.jpeg",
+      "imageAlt": "TA328 flexible tile adhesive being applied during wall tiling",
+      "dataSheetUrl": "./documents/products/optimix-ta328-data-sheet-en.pdf"
+    },
+    {
+      "slug": "tg410e",
+      "code": "TG410E",
+      "name": "Tile Grout (High Performance)",
+      "standard": "EN 13888 CG2 WA",
+      "description": "A decorative polymer-modified cementitious grout for strong, hard-wearing and water-resistant tile joints.",
+      "highlights": [
+        "Fine, standard and coarse textures",
+        "Recommended for joint widths from 1–15 mm",
+        "Efflorescence and mould-growth resistant"
+      ],
+      "imageUrl": "./media/products/optimix-tg410e-application.jpeg",
+      "imageAlt": "TG410E high-performance tile grout being finished between floor tiles",
+      "dataSheetUrl": "./documents/products/optimix-tg410e-data-sheet-en.pdf"
+    }
+  ],
+  "certificationsSection": {
+    "eyebrow": "Certifications & Credentials",
+    "title": "Credentials behind the specification.",
+    "description": "Management systems, product certifications and environmental credentials supplied by Optimix.",
+    "documentCount": "11",
+    "documentCountLabel": "Supplied documents",
+    "familyCount": "5",
+    "familyCountLabel": "Credential families",
+    "holderLabel": "Certified entity"
+  },
+  "credentialGroups": [
+    {
+      "slug": "management-systems",
+      "name": "Management Systems",
+      "description": "Certified systems covering named group entities and manufacturing operations.",
+      "items": [
+        {
+          "title": "ISO 9001:2015",
+          "subtitle": "Quality Management System",
+          "issuer": "SGS Hong Kong Limited",
+          "holder": "Cement Connections Limited; Zhuhai Xiangbang Eco Building Material Company Limited; Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2028-06-02",
+          "fileUrl": "./documents/certificates/iso-9001-2015-sgs.pdf"
+        },
+        {
+          "title": "ISO 14001:2015",
+          "subtitle": "Environmental Management System",
+          "issuer": "SGS Hong Kong Limited",
+          "holder": "Cement Connections Limited; Zhuhai Xiangbang Eco Building Material Company Limited; Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2028-01-25",
+          "fileUrl": "./documents/certificates/iso-14001-2015-sgs.pdf"
+        },
+        {
+          "title": "ISO 45001:2018",
+          "subtitle": "Occupational Health and Safety Management System",
+          "issuer": "China Quality Mark Certification Group",
+          "holder": "Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2027-08-22",
+          "fileUrl": "./documents/certificates/iso-45001-2018-dgfe.pdf"
+        },
+        {
+          "title": "ISO 50001:2018",
+          "subtitle": "Energy Management System",
+          "issuer": "China Quality Mark Certification Group",
+          "holder": "Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2028-01-14",
+          "fileUrl": "./documents/certificates/iso-50001-2018-dgfe.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "green-products",
+      "name": "Green Products",
+      "description": "Product-level environmental certification for selected mortars, adhesives and grout.",
+      "items": [
+        {
+          "title": "China Green Building Materials Product Certification",
+          "subtitle": "3-Star · FS151",
+          "issuer": "Guangdong Construction Engineering Quality and Safety Testing General Station",
+          "holder": "Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2028-10-10",
+          "fileUrl": "./documents/certificates/china-green-building-materials-3-star-fs151.pdf"
+        },
+        {
+          "title": "CIC Green Product Certification",
+          "subtitle": "Platinum · TA313",
+          "issuer": "Construction Industry Council",
+          "holder": "Optimix Group Limited",
+          "validUntil": "2029-03-12",
+          "fileUrl": "./documents/certificates/cic-green-product-platinum-ta313.pdf"
+        },
+        {
+          "title": "CIC Green Product Certification",
+          "subtitle": "Platinum · TA328",
+          "issuer": "Construction Industry Council",
+          "holder": "Optimix Group Limited",
+          "validUntil": "2029-01-20",
+          "fileUrl": "./documents/certificates/cic-green-product-platinum-ta328.pdf"
+        },
+        {
+          "title": "CIC Green Product Certification",
+          "subtitle": "Platinum · TG410E",
+          "issuer": "Construction Industry Council",
+          "holder": "Optimix Group Limited",
+          "validUntil": "2029-03-12",
+          "fileUrl": "./documents/certificates/cic-green-product-platinum-tg410e.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carbon-footprint",
+      "name": "Carbon Footprint",
+      "description": "Cradle-to-gate product carbon-footprint certification for named products.",
+      "items": [
+        {
+          "title": "Product Carbon Footprint Certification",
+          "subtitle": "TA313 · SF818",
+          "issuer": "China Testing & Certification International Group",
+          "holder": "Dongguan Far East Dry Powder Manufacturer Co., Ltd.",
+          "validUntil": "2028-04-29",
+          "fileUrl": "./documents/certificates/product-carbon-footprint-ta313-sf818.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "product-conformity",
+      "name": "Product Conformity",
+      "description": "Independent product certification for repair mortars and non-shrink grout.",
+      "items": [
+        {
+          "title": "PCCS-RM Product Certification",
+          "subtitle": "RM725 · RM740 · RM780 · NS612",
+          "issuer": "Fugro Certification Services Limited",
+          "holder": "Cement Connections Limited (supplier); Dongguan Far East Dry Powder Manufacturer Co., Ltd. (manufacturer)",
+          "validUntil": "2027-05-13",
+          "fileUrl": "./documents/certificates/pccs-rm-repair-mortar-and-grout.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "corporate-commitment",
+      "name": "Corporate Commitment",
+      "description": "A documented corporate commitment to environmental, social and governance improvement.",
+      "items": [
+        {
+          "title": "ESG Pledge 2026",
+          "subtitle": "Environment · Social Responsibility · Governance",
+          "issuer": "The Chinese Manufacturers' Association of Hong Kong",
+          "holder": "Optimix (Hong Kong) Limited",
+          "issuedOn": "2026-07-10",
+          "fileUrl": "./documents/certificates/esg-pledge-2026.pdf"
+        }
+      ]
+    }
+  ],
+  "projectsSection": {
+    "eyebrow": "Selected Project Portfolio",
+    "title": "Materials proven across complex construction.",
+    "description": "Thirty supplied projects spanning aviation, transport, hospitality, healthcare, education and commercial development.",
+    "projectCountLabel": "Documented projects",
+    "hongKongCountLabel": "Hong Kong projects",
+    "mainlandCountLabel": "Mainland projects",
+    "filterLabel": "Filter project portfolio",
+    "filters": [
+      { "slug": "all", "label": "All Projects" },
+      { "slug": "hong-kong", "label": "Hong Kong" },
+      { "slug": "mainland-china", "label": "Mainland China" }
+    ],
+    "initialVisibleCount": 6,
+    "showAllLabel": "View all projects",
+    "showFewerLabel": "Show selected projects",
+    "supplyYearsLabel": "Supply period",
+    "productsLabel": "Supplied products",
+    "casebookLabel": "Download project casebook",
+    "casebookUrl": "./documents/projects/optimix-selected-projects-2022-2024.pdf",
+    "nameTranslationStatus": "Working English translations pending Optimix client approval"
+  },
+  "projects": [
+    {
+      "slug": "hkia-third-runway",
+      "name": "Hong Kong International Airport Third Runway Passenger Concourse & Apron Works",
+      "sourceName": "香港机场第三跑道客运大楼及停机坪工程",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2023",
+      "products": ["BP22GP", "SC26GP", "F12", "BP126", "SC216", "NS612", "PC45", "WP515"],
+      "imageUrl": "./media/projects/01-hkia-third-runway.jpg",
+      "imageAlt": "Hong Kong International Airport Third Runway project photograph",
+      "featured": true
+    },
+    {
+      "slug": "cheung-kong-center-ii",
+      "name": "Cheung Kong Center II, Central",
+      "sourceName": "中环长江中心二期",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["TA328", "TG410E"],
+      "imageUrl": "./media/projects/02-cheung-kong-center-ii.jpg",
+      "imageAlt": "Cheung Kong Center II project photograph",
+      "featured": true
+    },
+    {
+      "slug": "west-kowloon-performing-arts-centre",
+      "name": "West Kowloon Performing Arts Centre",
+      "sourceName": "西九演艺中心",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2024",
+      "products": ["EVA", "TA328", "SF80", "BP126", "SC216"],
+      "imageUrl": "./media/projects/03-west-kowloon-performing-arts-centre.jpg",
+      "imageAlt": "West Kowloon Performing Arts Centre project photograph",
+      "featured": false
+    },
+    {
+      "slug": "sha-tin-racecourse",
+      "name": "Sha Tin Racecourse",
+      "sourceName": "沙田马场",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022",
+      "products": ["BP126", "BP138", "TA328", "NS612"],
+      "imageUrl": "./media/projects/04-sha-tin-racecourse.jpg",
+      "imageAlt": "Sha Tin Racecourse project photograph",
+      "featured": false
+    },
+    {
+      "slug": "hopewell-centre-ii",
+      "name": "Hopewell Centre II, Wan Chai",
+      "sourceName": "湾仔合和中心 II 期",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["BP126", "TA313", "TG410E", "SC216", "SC228"],
+      "imageUrl": "./media/projects/05-hopewell-centre-ii.jpg",
+      "imageAlt": "Hopewell Centre II project photograph",
+      "featured": true
+    },
+    {
+      "slug": "fullerton-ocean-park-hotel",
+      "name": "The Fullerton Ocean Park Hotel Hong Kong",
+      "sourceName": "香港富丽敦海洋公园酒店",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022",
+      "products": ["BP126", "Procrete", "SF80", "SF828", "TG410E", "SC216"],
+      "imageUrl": "./media/projects/06-fullerton-ocean-park-hotel.jpg",
+      "imageAlt": "The Fullerton Ocean Park Hotel Hong Kong project photograph",
+      "featured": false
+    },
+    {
+      "slug": "hkis-student-activity-centre",
+      "name": "Hong Kong International School Student Activity Centre",
+      "sourceName": "香港国际学校学生活动中心",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["SC228", "BP126"],
+      "imageUrl": "./media/projects/07-hkis-student-activity-centre.jpg",
+      "imageAlt": "Hong Kong International School Student Activity Centre project photograph",
+      "featured": false
+    },
+    {
+      "slug": "mtr-kowloon-bay-depot",
+      "name": "MTR Kowloon Bay Depot",
+      "sourceName": "港铁九龙湾车厂",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2023",
+      "products": ["SF878", "PC30", "RM725", "RM740"],
+      "imageUrl": "./media/projects/08-mtr-kowloon-bay-depot.jpg",
+      "imageAlt": "MTR Kowloon Bay Depot project photograph",
+      "featured": false
+    },
+    {
+      "slug": "aia-building-wan-chai",
+      "name": "AIA Building, Wan Chai",
+      "sourceName": "湾仔友邦大厦",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["TA328", "TG410E", "BP138"],
+      "imageUrl": "./media/projects/09-aia-building-wan-chai.jpg",
+      "imageAlt": "AIA Building in Wan Chai project photograph",
+      "featured": false
+    },
+    {
+      "slug": "hku-medicine-academic-building",
+      "name": "HKU Faculty of Medicine Academic Building",
+      "sourceName": "香港大学医学院学术楼",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022",
+      "products": ["BP126", "TA328", "TG410E", "SC216", "Procrete", "SF80"],
+      "imageUrl": "./media/projects/10-hku-medicine-academic-building.jpg",
+      "imageAlt": "HKU Faculty of Medicine Academic Building project photograph",
+      "featured": false
+    },
+    {
+      "slug": "hkust-jockey-club-ivillage",
+      "name": "HKUST Jockey Club Innovation Student Village, Sai Kung",
+      "sourceName": "西贡科技大学赛马会创新学生村",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["TA313", "TA328S", "TG410E", "BP126", "BP138", "SC273"],
+      "imageUrl": "./media/projects/11-hkust-jockey-club-ivillage.jpg",
+      "imageAlt": "HKUST Jockey Club Innovation Student Village project photograph",
+      "featured": false
+    },
+    {
+      "slug": "mtr-hung-hom-station",
+      "name": "MTR Hung Hom Station",
+      "sourceName": "港铁红磡站",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023",
+      "products": ["RM770", "PE"],
+      "imageUrl": "./media/projects/12-mtr-hung-hom-station.jpg",
+      "imageAlt": "MTR Hung Hom Station project photograph",
+      "featured": false
+    },
+    {
+      "slug": "bunshe-cheung-sha-wan",
+      "name": "Bunshe Residential Development, Cheung Sha Wan",
+      "sourceName": "长沙湾本舍",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["BP126", "TA328", "TG410E", "Procrete", "SC216"],
+      "imageUrl": "./media/projects/13-bunsui-cheung-sha-wan.jpg",
+      "imageAlt": "Bunshe residential development in Cheung Sha Wan project photograph",
+      "featured": false
+    },
+    {
+      "slug": "ventria-residence",
+      "name": "Ventria Residence, Happy Valley",
+      "sourceName": "跑马地长者公寓曦芸居",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["TA328", "BP126", "BP138", "Procrete", "SC216", "TG410E"],
+      "imageUrl": "./media/projects/14-ventria-residence.jpg",
+      "imageAlt": "Ventria Residence in Happy Valley project photograph",
+      "featured": false
+    },
+    {
+      "slug": "skycity-chek-lap-kok",
+      "name": "SKYCITY, Chek Lap Kok",
+      "sourceName": "赤鱲角航天城",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["SF80", "SF818", "SF828", "BP126", "SC228", "TA313", "TA328", "TG410E", "NS612"],
+      "imageUrl": "./media/projects/15-skycity-chek-lap-kok.jpg",
+      "imageAlt": "SKYCITY at Chek Lap Kok project photograph",
+      "featured": true
+    },
+    {
+      "slug": "lohas-park-seasons-place",
+      "name": "LOHAS Park Phase 12A — Seasons Place",
+      "sourceName": "日出康城12 期A Seasons Place",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["BP126", "TA328", "TG410E", "Procrete"],
+      "imageUrl": "./media/projects/16-lohas-park-seasons-place.jpg",
+      "imageAlt": "LOHAS Park Seasons Place project photograph",
+      "featured": false
+    },
+    {
+      "slug": "hsuh-new-academic-building",
+      "name": "New Academic Building, The Hang Seng University of Hong Kong",
+      "sourceName": "恒生大学新教学楼",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023",
+      "products": ["BP126", "BP138", "SC216", "SF80", "Procrete"],
+      "imageUrl": "./media/projects/17-hsuh-new-academic-building.jpg",
+      "imageAlt": "The Hang Seng University of Hong Kong new academic building project photograph",
+      "featured": false
+    },
+    {
+      "slug": "the-holborn",
+      "name": "THE HOLBORN, 2 Tai Cheung Street",
+      "sourceName": "西湾河太祥街2 号THE HOLBORN",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2023",
+      "products": ["BP126", "TG410E", "TG410ES", "Procrete", "TA313", "TA328", "TA328S", "SC216"],
+      "imageUrl": "./media/projects/18-the-holborn.jpg",
+      "imageAlt": "THE HOLBORN in Sai Wan Ho project photograph",
+      "featured": false
+    },
+    {
+      "slug": "kee-wah-production-centre",
+      "name": "Kee Wah Food Production Centre, Tai Po Industrial Estate",
+      "sourceName": "大埔工业邨奇华食品制作中心",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022",
+      "products": ["BP126", "BP138", "TA313", "TG410E", "SC216", "NS612"],
+      "imageUrl": "./media/projects/19-kee-wah-production-centre.jpg",
+      "imageAlt": "Kee Wah Food Production Centre in Tai Po project photograph",
+      "featured": false
+    },
+    {
+      "slug": "shek-wu-hui-sewage-treatment-works",
+      "name": "Shek Wu Hui Sewage Treatment Works, Sheung Shui",
+      "sourceName": "上水石湖墟污水处理厂",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["BP126", "SC216", "SC228", "TA313", "Procrete", "TG410E", "NS612"],
+      "imageUrl": "./media/projects/20-shek-wu-hui-sewage-treatment-works.jpg",
+      "imageAlt": "Shek Wu Hui Sewage Treatment Works project photograph",
+      "featured": false
+    },
+    {
+      "slug": "mong-kok-market-refurbishment",
+      "name": "Mong Kok Market Refurbishment",
+      "sourceName": "旺角街市翻新项目",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["PC30", "RM725", "SC216", "BP126", "BP138", "PE", "TA313"],
+      "imageUrl": "./media/projects/21-mong-kok-market-refurbishment.jpg",
+      "imageAlt": "Mong Kok Market refurbishment project photograph",
+      "featured": false
+    },
+    {
+      "slug": "sai-wan-ho-civic-centre-refurbishment",
+      "name": "Sai Wan Ho Civic Centre Refurbishment",
+      "sourceName": "西湾河文娱中心翻新项目",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023–2024",
+      "products": ["NS612", "TA328", "RM740", "PE", "TG410E", "BP126", "SC216"],
+      "imageUrl": "./media/projects/22-sai-wan-ho-civic-centre-refurbishment.jpg",
+      "imageAlt": "Sai Wan Ho Civic Centre refurbishment project photograph",
+      "featured": false
+    },
+    {
+      "slug": "north-lantau-hospital",
+      "name": "North Lantau Hospital",
+      "sourceName": "北大屿山医院",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2022–2024",
+      "products": ["BP126", "BP138", "SC228", "TA328", "Procrete", "TG410E", "FH919", "F12", "SF818", "SF80"],
+      "imageUrl": "./media/projects/23-north-lantau-hospital.jpg",
+      "imageAlt": "North Lantau Hospital project photograph",
+      "featured": false
+    },
+    {
+      "slug": "kowloon-hospital-refurbishment",
+      "name": "Kowloon Hospital Refurbishment",
+      "sourceName": "九龙医院翻新项目",
+      "location": "Hong Kong",
+      "region": "hong-kong",
+      "supplyYears": "2023",
+      "products": ["WP533", "BP168", "TA328", "TG410E", "FS161", "Procrete"],
+      "imageUrl": "./media/projects/24-kowloon-hospital-refurbishment.jpg",
+      "imageAlt": "Kowloon Hospital refurbishment project photograph",
+      "featured": false
+    },
+    {
+      "slug": "heartland-66-wuhan",
+      "name": "Heartland 66, Wuhan",
+      "sourceName": "武汉恒隆广场",
+      "location": "Wuhan, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2022–2024",
+      "products": ["DB390", "DB391", "TA312", "TA313", "TA328S", "WP568"],
+      "imageUrl": "./media/projects/25-heartland-66-wuhan.jpg",
+      "imageAlt": "Heartland 66 in Wuhan project photograph",
+      "featured": true
+    },
+    {
+      "slug": "central-plaza-shanghai-refurbishment",
+      "name": "Central Plaza, Huaihai Road — Refurbishment",
+      "sourceName": "上海淮海路中环广场翻新项目",
+      "location": "Shanghai, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2022",
+      "products": ["FS151", "TA313", "TA328(S)", "TG410ES"],
+      "imageUrl": "./media/projects/26-central-plaza-shanghai-refurbishment.jpg",
+      "imageAlt": "Central Plaza on Huaihai Road in Shanghai project photograph",
+      "featured": false
+    },
+    {
+      "slug": "icc-office-tower-suzhou",
+      "name": "ICC Office Tower, Suzhou Huanmao Plaza",
+      "sourceName": "苏州环贸广场ICC 办公楼",
+      "location": "Suzhou, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2023",
+      "products": ["邦霸300", "TA33", "TA312"],
+      "imageUrl": "./media/projects/27-icc-office-tower-suzhou.jpg",
+      "imageAlt": "ICC Office Tower at Suzhou Huanmao Plaza project photograph",
+      "featured": false
+    },
+    {
+      "slug": "shanghai-xujiahui-centre",
+      "name": "Shanghai Xujiahui Centre",
+      "sourceName": "上海徐家汇中心",
+      "location": "Shanghai, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2022–2024",
+      "products": ["BP126", "FS151", "TA313", "SA318", "TA328", "TA328S", "TG410ES"],
+      "imageUrl": "./media/projects/28-shanghai-xujiahui-centre.jpg",
+      "imageAlt": "Shanghai Xujiahui Centre project photograph",
+      "featured": true
+    },
+    {
+      "slug": "kwg-diecuifeng-nanning",
+      "name": "KWG Diecuifeng, Nanning",
+      "sourceName": "南宁合景叠翠峰",
+      "location": "Nanning, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2023",
+      "products": ["邦霸300", "Procrete"],
+      "imageUrl": "./media/projects/29-kwg-diecuifeng-nanning.jpg",
+      "imageAlt": "KWG Diecuifeng in Nanning project photograph",
+      "featured": false
+    },
+    {
+      "slug": "tencent-digital-building-shenzhen",
+      "name": "Tencent Digital Building, Shenzhen",
+      "sourceName": "深圳腾讯数码大厦",
+      "location": "Shenzhen, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": "2022",
+      "products": ["TA312", "TA313", "邦霸300"],
+      "imageUrl": "./media/projects/30-tencent-digital-building-shenzhen.jpg",
+      "imageAlt": "Tencent Digital Building in Shenzhen project photograph",
+      "featured": false
+    }
+  ],
+  "downloadsSection": {
+    "eyebrow": "Technical Downloads",
+    "title": "Technical information, organised for the job.",
+    "description": "Access Optimix product documents through the existing member knowledge base.",
+    "accessLabel": "Member-access library",
+    "portalTitle": "Product documents and technical resources.",
+    "portalDescription": "Product catalogues, manuals and leaflets are available to registered Optimix members.",
+    "portalUrl": "https://www.optimix.com.hk/en/login",
+    "ctaLabel": "Open Download Area",
+    "resourceTypes": ["Product Catalogue", "Technical Manual", "Product Leaflet"]
+  },
+  "newsSection": {
+    "eyebrow": "News & Events",
+    "title": "Latest from Optimix.",
+    "description": "Project partnerships, sustainability milestones and community initiatives.",
+    "ctaLabel": "View All News",
+    "ctaUrl": "https://www.optimix.com.hk/en/news"
+  },
+  "news": [
+    {
+      "slug": "in-one-low-carbon-healthy-community",
+      "date": "2026-07-29",
+      "title": "OPTIMIX Partners with IN ONE to Build a Low-Carbon, Healthy Community",
+      "url": "https://www.optimix.com.hk/news_detail/210/OPTIMIX-Partners-with-IN-ONE-to-Build-a-Low-Carbon%2C-Healthy-Community"
+    },
+    {
+      "slug": "carbon-awards-2026",
+      "date": "2026-06-29",
+      "title": "Optimix Honoured with the Carbon Awards 2026: Leading the Green Transformation",
+      "url": "https://www.optimix.com.hk/news_detail/206/Optimix-Honoured-with-the-Carbon-Awards-2026%3A-Leading-the-Green-Transformation"
+    },
+    {
+      "slug": "community-care-and-action",
+      "date": "2026-06-12",
+      "title": "Optimix Bringing Warmth to the Community Through Care and Action",
+      "url": "https://www.optimix.com.hk/news_detail/204/Optimix-Bringing-Warmth-to-the-Community-Through-Care-and-Action"
+    }
+  ],
+  "contact": {
+    "location": "Hong Kong Headquarters",
+    "officeLabel": "Hong Kong Office",
+    "address": [
+      "20th Floor, SUP Tower",
+      "75-83 King's Road, North Point",
+      "Hong Kong SAR"
+    ],
+    "methods": [
+      {
+        "type": "office-main-line",
+        "label": "Office main line",
+        "value": "+852 2395 5388",
+        "href": "tel:+85223955388"
+      },
+      {
+        "type": "order-hotline",
+        "label": "Order hotline",
+        "value": "+852 2802 6433",
+        "href": "tel:+85228026433"
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "info@optimix.com.hk",
+        "href": "mailto:info@optimix.com.hk"
+      }
+    ],
+    "locationsUrl": "https://www.optimix.com.hk/contact"
+  },
+  "footer": {
+    "eyebrow": "Project Enquiries",
+    "title": "Discuss your next project with Optimix.",
+    "description": "For product, specification and technical enquiries, contact the Hong Kong team.",
+    "ctaLabel": "Email Optimix",
+    "navigationLabel": "Explore",
+    "navigation": [
+      { "label": "Systems", "href": "#systems" },
+      { "label": "Products", "href": "#products" },
+      { "label": "Credentials", "href": "#certifications" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Downloads", "href": "#downloads" },
+      { "label": "News", "href": "#news" }
+    ],
+    "locationsLabel": "View all locations"
+  }
+}
