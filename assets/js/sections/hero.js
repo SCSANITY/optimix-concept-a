@@ -8,7 +8,8 @@ function populateHero(root) {
   const primaryCta = root.querySelector('[data-hero-primary-cta]');
   const secondaryCta = root.querySelector('[data-hero-secondary-cta]');
   const secondaryLabel = root.querySelector('[data-hero-secondary-label]');
-  const stats = root.querySelector('[data-hero-stats]');
+  const filmLabel = root.querySelector('[data-hero-film-label]');
+  const filmDuration = root.querySelector('[data-hero-film-duration]');
 
   eyebrow.textContent = hero.eyebrow;
   description.textContent = hero.description;
@@ -16,6 +17,8 @@ function populateHero(root) {
   primaryCta.textContent = hero.primaryCta.label;
   secondaryCta.href = hero.secondaryCta.href;
   secondaryLabel.textContent = hero.secondaryCta.label;
+  filmLabel.textContent = hero.filmLabel;
+  filmDuration.textContent = hero.filmDuration;
 
   hero.titleLines.forEach((line, index) => {
     const titleLine = document.createElement('span');
@@ -29,28 +32,6 @@ function populateHero(root) {
     }
   });
 
-  hero.statSlugs.forEach((slug, index) => {
-    const stat = content.companyStats.find((item) => item.slug === slug);
-    if (!stat) return;
-
-    const wrapper = document.createElement('div');
-    wrapper.className = [
-      'py-6 sm:py-7',
-      index > 0 ? 'border-l border-white/20 pl-4 sm:pl-8' : '',
-      index < hero.statSlugs.length - 1 ? 'pr-3 sm:pr-8' : '',
-    ].filter(Boolean).join(' ');
-
-    const value = document.createElement('dt');
-    value.className = 'font-heading text-2xl font-bold tracking-[-0.02em] text-white sm:text-3xl';
-    value.textContent = stat.value;
-
-    const label = document.createElement('dd');
-    label.className = 'mt-1.5 max-w-36 text-[10px] font-medium uppercase leading-[1.35] tracking-[0.08em] text-white/55 sm:text-xs';
-    label.textContent = stat.label;
-
-    wrapper.append(value, label);
-    stats.append(wrapper);
-  });
 }
 
 function parseRgb(color) {

@@ -1,0 +1,23 @@
+<!--
+  CMS MAPPING
+  - Page copy, proof label and hero image → WordPress Page fields
+  - Shared glass composition → Fixed theme template behavior
+-->
+<section class="internal-hero relative isolate min-h-[58svh] overflow-hidden bg-deep-blue text-white" data-internal-hero>
+  <img class="internal-hero__image absolute inset-0 h-full w-full object-cover" alt="" data-internal-hero-image>
+  <div class="internal-hero__grade pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="relative z-10 mx-auto flex min-h-[58svh] max-w-site flex-col justify-end px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
+    <div class="grid gap-7 lg:grid-cols-12 lg:items-end">
+      <div class="internal-hero__panel p-6 sm:p-8 lg:col-span-8 lg:p-10" data-reveal>
+        <p class="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.17em] text-white/72 sm:text-xs">
+          <span class="h-0.5 w-8 bg-brand-red" aria-hidden="true"></span>
+          <span data-internal-hero-eyebrow></span>
+        </p>
+        <h1 class="mt-5 max-w-[820px] font-heading text-[2.55rem] font-extrabold leading-[1] tracking-[-0.045em] text-white sm:text-5xl lg:text-[4rem]" data-internal-hero-title></h1>
+        <p class="mt-5 max-w-[640px] text-base leading-[1.65] text-white/72 sm:text-lg" data-internal-hero-description></p>
+      </div>
+      <p class="w-fit border border-white/20 bg-deep-blue/30 px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white/68 backdrop-blur-md lg:col-span-4 lg:ml-auto" data-internal-hero-proof data-reveal></p>
+    </div>
+  </div>
+</section>

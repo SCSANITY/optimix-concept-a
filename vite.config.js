@@ -48,5 +48,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        home: path.resolve(projectRoot, 'index.html'),
+        products: path.resolve(projectRoot, 'products.html'),
+        projects: path.resolve(projectRoot, 'projects.html'),
+        certifications: path.resolve(projectRoot, 'certifications.html'),
+        company: path.resolve(projectRoot, 'company.html'),
+      },
+    },
   },
 });

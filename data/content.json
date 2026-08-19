@@ -6,37 +6,118 @@
   },
   "header": {
     "navigation": [
-      { "label": "Systems", "href": "#systems" },
-      { "label": "Products", "href": "#products" },
-      { "label": "Credentials", "href": "#certifications" },
-      { "label": "Projects", "href": "#projects" },
-      { "label": "News", "href": "#news" }
+      { "page": "home", "label": "Home", "href": "./index.html" },
+      { "page": "products", "label": "Products", "href": "./products.html" },
+      { "page": "projects", "label": "Projects", "href": "./projects.html" },
+      { "page": "certifications", "label": "Certifications", "href": "./certifications.html" },
+      { "page": "company", "label": "Company", "href": "./company.html" }
     ],
     "contactCta": {
       "label": "Contact Us"
     }
   },
   "hero": {
-    "eyebrow": "Technical Dry Mortar · Hong Kong Since 2000",
+    "eyebrow": "Hong Kong · Technical Dry Mortar Since 2000",
     "titleLines": [
-      "Material systems for",
-      "landmark construction."
+      "Built from",
+      "the ground up."
     ],
-    "description": "Optimix researches and manufactures technical dry mortar for demanding building projects.",
+    "description": "Technical dry mortar systems engineered, manufactured and proven across demanding construction environments.",
     "media": {
-      "videoUrl": "./media/hero/material-mixing-placeholder-pexels-6473933.mp4",
-      "posterUrl": "./media/hero/material-mixing-placeholder-poster.png",
-      "placeholder": true
+      "videoUrl": "./media/hero/optimix-corporate-hero-loop.mp4",
+      "fullVideoUrl": "./media/hero/optimix-corporate-film-full.mp4",
+      "posterUrl": "./media/hero/optimix-corporate-hero-poster.jpg",
+      "placeholder": false
     },
     "primaryCta": {
-      "label": "Explore Our Systems",
-      "href": "#systems"
+      "label": "Explore Products",
+      "href": "./products.html"
     },
     "secondaryCta": {
-      "label": "View Featured Projects",
-      "href": "#projects"
+      "label": "Watch Full Film",
+      "href": "./media/hero/optimix-corporate-film-full.mp4"
     },
-    "statSlugs": ["experience", "capacity", "certification"]
+    "filmLabel": "Optimix Corporate Film",
+    "filmDuration": "03:43"
+  },
+  "homeGatewaysSection": {
+    "eyebrow": "Core Portfolio",
+    "title": "Performance, made visible.",
+    "description": "Move directly into the three areas that define Optimix: technical products, built projects and verified credentials."
+  },
+  "homeGateways": [
+    {
+      "slug": "projects",
+      "index": "01",
+      "title": "Project Portfolio",
+      "description": "Thirty documented projects across Hong Kong and Mainland China.",
+      "href": "./projects.html",
+      "linkLabel": "Explore Projects",
+      "imageUrl": "./media/projects/01-hkia-third-runway.jpg",
+      "imageAlt": "Hong Kong International Airport Third Runway project"
+    },
+    {
+      "slug": "products",
+      "index": "02",
+      "title": "Technical Products",
+      "description": "Material systems for tiling, waterproofing, repair and critical construction layers.",
+      "href": "./products.html",
+      "linkLabel": "Explore Products",
+      "imageUrl": "./media/products/optimix-ta328-application.jpeg",
+      "imageAlt": "Optimix tile adhesive being applied on site"
+    },
+    {
+      "slug": "certifications",
+      "index": "03",
+      "title": "Verified Credentials",
+      "description": "Eleven supplied management, product and environmental credentials.",
+      "href": "./certifications.html",
+      "linkLabel": "View Certifications",
+      "imageUrl": "./media/certifications/cic-green-product-ta328-preview.jpg",
+      "imageAlt": "CIC Green Product Certification for Optimix TA328"
+    }
+  ],
+  "homeProjectProof": {
+    "eyebrow": "Featured Proof",
+    "title": "Specified for infrastructure at landmark scale.",
+    "projectSlug": "hkia-third-runway",
+    "ctaLabel": "View the Project Portfolio",
+    "ctaHref": "./projects.html",
+    "portfolioLabel": "30 documented projects"
+  },
+  "internalPages": {
+    "products": {
+      "eyebrow": "Products & Material Systems",
+      "title": "Technical materials, specified by application.",
+      "description": "Explore Optimix product categories and three supplied flagship products for demanding tiling systems.",
+      "imageUrl": "./media/products/optimix-ta328-application.jpeg",
+      "imageAlt": "Optimix flexible tile adhesive being applied on site",
+      "proof": "9 product categories"
+    },
+    "projects": {
+      "eyebrow": "Selected Project Portfolio",
+      "title": "Built work is the proof.",
+      "description": "A supplied portfolio of landmark infrastructure, hospitality, education and commercial projects.",
+      "imageUrl": "./media/projects/02-cheung-kong-center-ii.jpg",
+      "imageAlt": "Cheung Kong Center II project in Central, Hong Kong",
+      "proof": "30 documented projects"
+    },
+    "certifications": {
+      "eyebrow": "Certifications & Credentials",
+      "title": "Verified from system to product.",
+      "description": "Management, environmental and product credentials supplied by Optimix and presented as source documents.",
+      "imageUrl": "./media/certifications/cic-green-product-ta328-preview.jpg",
+      "imageAlt": "CIC Green Product Certification for Optimix TA328",
+      "proof": "11 supplied credentials"
+    },
+    "company": {
+      "eyebrow": "Optimix Since 2000",
+      "title": "Manufacturing confidence into every layer.",
+      "description": "Research, manufacturing and technical dry mortar expertise developed for Hong Kong construction.",
+      "imageUrl": "./media/company/optimix-production-facility.jpg",
+      "imageAlt": "Optimix production and logistics facility",
+      "proof": "Hong Kong · Greater Bay Area"
+    }
   },
   "companyStats": [
     { "slug": "experience", "value": "20+", "label": "Years Experience" },
@@ -724,7 +805,7 @@
         "href": "mailto:info@optimix.com.hk"
       }
     ],
-    "locationsUrl": "https://www.optimix.com.hk/contact"
+    "locationsUrl": "./company.html"
   },
   "supportAssistant": {
     "title": "Optimix Technical Assistant",
@@ -744,28 +825,28 @@
         "label": "Explore product categories",
         "response": "Optimix products are organised into nine construction material categories on this page.",
         "actionLabel": "View Products",
-        "actionHref": "#products"
+        "actionHref": "./products.html"
       },
       {
         "id": "systems",
-        "label": "View system solutions",
-        "response": "Review the current system solution index. Approved technical drawings will be added when supplied.",
-        "actionLabel": "View Systems",
-        "actionHref": "#systems"
+        "label": "Explore material systems",
+        "response": "Browse Optimix product categories and supplied flagship products for construction applications.",
+        "actionLabel": "View Products",
+        "actionHref": "./products.html#products"
       },
       {
         "id": "documents",
         "label": "Find technical documents",
         "response": "Technical data sheets for the featured products are available from their product entries.",
         "actionLabel": "View Downloads",
-        "actionHref": "#downloads"
+        "actionHref": "./products.html#products"
       },
       {
         "id": "contact",
         "label": "Contact Optimix",
         "response": "For product, specification and technical enquiries, use the verified contact details in the page footer.",
         "actionLabel": "View Contact Details",
-        "actionHref": "#contact"
+        "actionHref": "./index.html#contact"
       }
     ]
   },
@@ -776,13 +857,12 @@
     "ctaLabel": "Email Optimix",
     "navigationLabel": "Explore",
     "navigation": [
-      { "label": "Systems", "href": "#systems" },
-      { "label": "Products", "href": "#products" },
-      { "label": "Credentials", "href": "#certifications" },
-      { "label": "Projects", "href": "#projects" },
-      { "label": "Downloads", "href": "#downloads" },
-      { "label": "News", "href": "#news" }
+      { "label": "Home", "href": "./index.html" },
+      { "label": "Products", "href": "./products.html" },
+      { "label": "Projects", "href": "./projects.html" },
+      { "label": "Certifications", "href": "./certifications.html" },
+      { "label": "Company", "href": "./company.html" }
     ],
-    "locationsLabel": "View all locations"
+    "locationsLabel": "View company profile"
   }
 }

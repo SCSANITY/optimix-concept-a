@@ -1,6 +1,8 @@
 import '../css/main.css';
 import { initHeader } from './sections/header.js';
 import { initHero } from './sections/hero.js';
+import { initHomeShowcase } from './sections/home-showcase.js';
+import { initInternalPage } from './sections/internal-page.js';
 import { initAbout } from './sections/about.js';
 import { initSystems } from './sections/systems.js';
 import { initProducts } from './sections/products.js';
@@ -15,6 +17,8 @@ import { initBrandMotion } from './brand-motion.js';
 
 initHeader();
 initHero();
+initHomeShowcase();
+initInternalPage();
 initAbout();
 initSystems();
 initProducts();

@@ -2,12 +2,20 @@ import content from '../../../data/content.json';
 
 function createNavigationLink(item, mobile = false) {
   const link = document.createElement('a');
+  const currentPage = document.body.dataset.page || 'home';
+  const isCurrent = item.page === currentPage;
   link.href = item.href;
   link.textContent = item.label;
   link.dataset.headerNavLink = '';
+  link.dataset.navPage = item.page;
   link.className = mobile
     ? 'border-b border-ink/10 py-4 text-base font-semibold text-ink transition-colors hover:text-brand-blue focus-visible:outline-none focus-visible:text-brand-blue'
-    : 'py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4';
+    : 'header-nav-link relative py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4';
+
+  if (isCurrent) {
+    link.setAttribute('aria-current', 'page');
+    link.classList.add('is-current');
+  }
 
   return link;
 }

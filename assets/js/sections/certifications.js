@@ -18,7 +18,20 @@ function createCredentialLink(credential, holderLabel) {
   link.href = credential.fileUrl;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  link.className = 'group grid gap-4 border-t border-white/15 py-6 transition-colors hover:bg-white/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white sm:grid-cols-[1fr_auto] sm:gap-8 sm:px-4';
+  link.className = 'credential-link group grid gap-5 border-t border-white/15 py-6 transition-colors hover:bg-white/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white sm:grid-cols-[7.5rem_minmax(0,1fr)_auto] sm:items-start sm:gap-6 sm:px-4';
+
+  const preview = document.createElement('figure');
+  preview.className = 'credential-preview overflow-hidden bg-white';
+
+  const image = document.createElement('img');
+  image.className = 'h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.025]';
+  image.src = credential.fileUrl
+    .replace('./documents/certificates/', './media/certifications/')
+    .replace(/\.pdf$/i, '.jpg');
+  image.alt = `${credential.title} document preview`;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  preview.append(image);
 
   const body = document.createElement('div');
 
@@ -54,7 +67,7 @@ function createCredentialLink(credential, holderLabel) {
 
   body.append(title, subtitle, issuer, holder);
   meta.append(date, arrow);
-  link.append(body, meta);
+  link.append(preview, body, meta);
   return link;
 }
 

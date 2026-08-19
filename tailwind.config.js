@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',
+    './*.html',
     './partials/**/*.html',
     './assets/js/**/*.js',
+  ],
+  safelist: [
+    'gateway-panel--projects',
+    'gateway-panel--products',
+    'gateway-panel--certifications',
   ],
   theme: {
     extend: {

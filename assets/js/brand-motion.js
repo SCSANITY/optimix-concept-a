@@ -22,7 +22,7 @@ export function initBrandMotion() {
     });
 
     const activeSection = sections[activeIndex];
-    const isDark = ['hero', 'certifications'].includes(activeSection.id);
+    const isDark = ['hero', 'certifications', 'featured-project'].includes(activeSection.id);
     document.documentElement.style.setProperty('--page-progress', progress.toFixed(4));
     rail?.classList.toggle('is-on-dark', isDark);
     rail?.setAttribute('data-active-section', activeSection.id);
