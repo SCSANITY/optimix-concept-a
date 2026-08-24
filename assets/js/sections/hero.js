@@ -8,6 +8,7 @@ function populateHero(root) {
   const primaryCta = root.querySelector('[data-hero-primary-cta]');
   const secondaryCta = root.querySelector('[data-hero-secondary-cta]');
   const secondaryLabel = root.querySelector('[data-hero-secondary-label]');
+  const filmLink = root.querySelector('[data-hero-film-link]');
   const filmLabel = root.querySelector('[data-hero-film-label]');
   const filmDuration = root.querySelector('[data-hero-film-duration]');
 
@@ -17,132 +18,29 @@ function populateHero(root) {
   primaryCta.textContent = hero.primaryCta.label;
   secondaryCta.href = hero.secondaryCta.href;
   secondaryLabel.textContent = hero.secondaryCta.label;
+  filmLink.href = hero.media.fullVideoUrl;
   filmLabel.textContent = hero.filmLabel;
   filmDuration.textContent = hero.filmDuration;
 
-  hero.titleLines.forEach((line, index) => {
+  title.replaceChildren();
+  hero.titleLines.forEach((line) => {
     const titleLine = document.createElement('span');
-    titleLine.textContent = line;
-    title.append(titleLine);
+    titleLine.className = 'hero-title__line';
 
-    if (index < hero.titleLines.length - 1) {
-      const desktopBreak = document.createElement('br');
-      desktopBreak.className = 'hidden lg:block';
-      title.append(document.createTextNode(' '), desktopBreak);
+    const titleText = document.createElement('span');
+    titleText.className = 'hero-title__text';
+    titleText.textContent = typeof line === 'string' ? line : line.text;
+    titleLine.append(titleText);
+
+    if (typeof line === 'object' && line.accent) {
+      const accent = document.createElement('span');
+      accent.className = 'hero-title__accent';
+      accent.textContent = line.accent;
+      titleLine.append(accent);
     }
+
+    title.append(titleLine);
   });
-
-}
-
-function parseRgb(color) {
-  const channels = color.match(/[\d.]+/g)?.slice(0, 3).map(Number);
-  return channels?.length === 3 ? channels : [255, 255, 255];
-}
-
-function createParticle(width, height, colors) {
-  const isBlue = Math.random() < 0.82;
-
-  return {
-    x: width * (0.42 + Math.random() * 0.58),
-    y: Math.random() * height,
-    size: 1 + Math.pow(Math.random(), 1.8) * 1.6,
-    speed: 8 + Math.random() * 6,
-    rotation: Math.random() * Math.PI,
-    color: isBlue ? colors.blue : colors.red,
-    alpha: isBlue ? 0.07 + Math.random() * 0.04 : 0.06 + Math.random() * 0.02,
-  };
-}
-
-function initParticles(root) {
-  const canvas = root.querySelector('[data-particle-canvas]');
-  const blueProbe = root.querySelector('[data-particle-blue]');
-  const redProbe = root.querySelector('[data-particle-red]');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (!canvas || !blueProbe || !redProbe) return;
-
-  const context = canvas.getContext('2d');
-  if (!context) return;
-
-  const colors = {
-    blue: parseRgb(getComputedStyle(blueProbe).backgroundColor),
-    red: parseRgb(getComputedStyle(redProbe).backgroundColor),
-  };
-
-  let particles = [];
-  let animationFrame = null;
-  let previousTime = 0;
-  let width = 0;
-  let height = 0;
-
-  const resize = () => {
-    const bounds = root.getBoundingClientRect();
-    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-    width = bounds.width;
-    height = bounds.height;
-    canvas.width = Math.round(width * pixelRatio);
-    canvas.height = Math.round(height * pixelRatio);
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
-    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-
-    const particleCount = width < 640 ? 28 : 84;
-    particles = Array.from({ length: particleCount }, () => createParticle(width, height, colors));
-  };
-
-  const drawParticle = (particle) => {
-    const [red, green, blue] = particle.color;
-    const halfSize = particle.size / 2;
-    context.save();
-    context.translate(particle.x, particle.y);
-    context.rotate(particle.rotation);
-    context.fillStyle = `rgba(${red}, ${green}, ${blue}, ${particle.alpha})`;
-    context.beginPath();
-    context.moveTo(-halfSize, -halfSize * 0.65);
-    context.lineTo(halfSize * 0.8, -halfSize);
-    context.lineTo(halfSize, halfSize * 0.55);
-    context.lineTo(-halfSize * 0.7, halfSize);
-    context.closePath();
-    context.fill();
-    context.restore();
-  };
-
-  const animate = (time) => {
-    const elapsed = Math.min((time - previousTime) / 1000, 0.05);
-    previousTime = time;
-    context.clearRect(0, 0, width, height);
-
-    particles.forEach((particle) => {
-      particle.y += particle.speed * elapsed;
-      if (particle.y > height + particle.size) {
-        Object.assign(particle, createParticle(width, height, colors), { y: -particle.size });
-      }
-      drawParticle(particle);
-    });
-
-    animationFrame = window.requestAnimationFrame(animate);
-  };
-
-  const stop = () => {
-    if (animationFrame) window.cancelAnimationFrame(animationFrame);
-    animationFrame = null;
-    context.clearRect(0, 0, width, height);
-  };
-
-  const start = () => {
-    stop();
-    if (reduceMotion.matches || document.hidden) return;
-    previousTime = performance.now();
-    animationFrame = window.requestAnimationFrame(animate);
-  };
-
-  const resizeObserver = new ResizeObserver(() => {
-    resize();
-    start();
-  });
-
-  resizeObserver.observe(root);
-  reduceMotion.addEventListener('change', start);
-  document.addEventListener('visibilitychange', start);
 }
 
 function configureVideo(root) {
@@ -241,6 +139,6 @@ export function initHero() {
 
   populateHero(hero);
   configureVideo(hero);
-  initParticles(hero);
   initHeroMotion(hero);
+  window.requestAnimationFrame(() => hero.classList.add('is-ready'));
 }

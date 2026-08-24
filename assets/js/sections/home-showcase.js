@@ -4,6 +4,7 @@ function createGateway(item) {
   const link = document.createElement('a');
   link.className = `gateway-panel gateway-panel--${item.slug} group`;
   link.href = item.href;
+  link.dataset.gateway = item.slug;
   link.setAttribute('aria-label', `${item.linkLabel}: ${item.title}`);
 
   const image = document.createElement('img');
@@ -52,11 +53,44 @@ function initGateways() {
 
   const settings = content.homeGatewaysSection;
   root.querySelector('[data-home-gateways-eyebrow]').textContent = settings.eyebrow;
-  root.querySelector('[data-home-gateways-title]').textContent = settings.title;
+  const title = root.querySelector('[data-home-gateways-title]');
+  settings.titleLines.forEach((line) => {
+    const titleLine = document.createElement('span');
+    titleLine.textContent = line;
+    title.append(titleLine);
+  });
   root.querySelector('[data-home-gateways-description]').textContent = settings.description;
 
   const list = root.querySelector('[data-home-gateways-list]');
-  content.homeGateways.forEach((item) => list.append(createGateway(item)));
+  const activeLabel = root.querySelector('[data-gateway-active-label]');
+  const panels = content.homeGateways.map((item) => {
+    const panel = createGateway(item);
+    list.append(panel);
+    return { item, panel };
+  });
+
+  const defaultSlug = content.homeGateways[0]?.slug;
+  const setActive = (slug = defaultSlug) => {
+    const active = panels.find(({ item }) => item.slug === slug) || panels[0];
+    if (!active) return;
+
+    list.dataset.activeGateway = active.item.slug;
+    panels.forEach(({ item, panel }) => {
+      panel.classList.toggle('is-active', item.slug === active.item.slug);
+    });
+    activeLabel.textContent = `${active.item.index} / ${active.item.title}`;
+  };
+
+  panels.forEach(({ item, panel }) => {
+    panel.addEventListener('pointerenter', () => setActive(item.slug));
+    panel.addEventListener('focus', () => setActive(item.slug));
+  });
+  list.addEventListener('pointerleave', () => setActive());
+  list.addEventListener('focusout', (event) => {
+    if (!list.contains(event.relatedTarget)) setActive();
+  });
+
+  setActive();
 }
 
 function initProjectProof() {

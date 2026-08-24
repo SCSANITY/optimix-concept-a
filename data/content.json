@@ -17,12 +17,12 @@
     }
   },
   "hero": {
-    "eyebrow": "Hong Kong · Technical Dry Mortar Since 2000",
+    "eyebrow": "Advanced Dry Mortar Technology · Hong Kong Since 2000",
     "titleLines": [
-      "Built from",
-      "the ground up."
+      { "text": "Performance," },
+      { "text": "Built", "accent": "in." }
     ],
-    "description": "Technical dry mortar systems engineered, manufactured and proven across demanding construction environments.",
+    "description": "High-performance dry mortar systems engineered for consistent, durable and more sustainable construction.",
     "media": {
       "videoUrl": "./media/hero/optimix-corporate-hero-loop.mp4",
       "fullVideoUrl": "./media/hero/optimix-corporate-film-full.mp4",
@@ -34,16 +34,19 @@
       "href": "./products.html"
     },
     "secondaryCta": {
-      "label": "Watch Full Film",
-      "href": "./media/hero/optimix-corporate-film-full.mp4"
+      "label": "View Proven Projects",
+      "href": "./projects.html"
     },
     "filmLabel": "Optimix Corporate Film",
     "filmDuration": "03:43"
   },
   "homeGatewaysSection": {
     "eyebrow": "Core Portfolio",
-    "title": "Performance, made visible.",
-    "description": "Move directly into the three areas that define Optimix: technical products, built projects and verified credentials."
+    "titleLines": [
+      "From material",
+      "to proof."
+    ],
+    "description": "Three connected fields define Optimix: engineered products, documented projects and independently verified credentials."
   },
   "homeGateways": [
     {
