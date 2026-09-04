@@ -15,7 +15,7 @@ export default {
       colors: {
         'brand-blue': '#00609C',
         'brand-red': '#DD0330',
-        'deep-blue': '#07324B',
+        'deep-blue': '#0B3D5A',
         ink: '#142B38',
         paper: '#FFFFFF',
         mist: '#F4F7F8',
