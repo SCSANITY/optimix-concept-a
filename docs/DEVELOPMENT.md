@@ -92,11 +92,11 @@
 
 - 实际仓库：`D:/SCSANITY/数字游民/Optimix/WebA/concept-a`
 - 当前分支：`main`，跟踪 `origin/main`
-- 代码基线：`3744b21`
+- 当前主题代码基线：`6ad9fdd`（文档同步提交可能位于其后）
 - 远端：`https://github.com/SCSANITY/optimix-concept-a.git`
-- 2026-09-04 接入盘点开始时工作区干净；接入任务留下新增 `AGENTS.md`、新增本文件、修改 `README.md`、修改 `docs/ASSET_PROVENANCE.md` 四项未提交文档改动。外层 onboarding response 不属于此独立仓库。
-- 同日主题色任务新增 `assets/css/main.css` 与 `tailwind.config.js` 两项未提交代码改动；当前 `git status --short` 应只包含上述六个文件。
-- 上述两项任务均未 commit、未 push、未 deploy。
+- 2026-09-04 接入文档已提交为 `23991d7`（`Add project development documentation`）。外层 onboarding response 不属于此独立仓库。
+- 同日主题色代码已提交为 `6ad9fdd`（`Lighten the deep blue theme`）。
+- 两个提交均已推送至 `origin/main`；主题部署和线上复核依据见第 10 节。
 
 当前 Codex 启动目录 `C:/Users/SCSANITY/Documents/Codex/2026-09-04/optimix-codex-d-scsanity-optimix-weba` 不是 Git 仓库，也不是上述仓库的已登记 worktree。后续开发应先确认正在操作的仓库根目录，避免把工作写进临时工作目录。
 
@@ -137,5 +137,7 @@
 - `npm.cmd run build` 成功；Vite 8.2.1 构建五个 HTML 入口，输出 CSS `main-B5NKC4jM.css`、JS `main-CC1oiS_E.js`。
 - 用本地 Vite preview 和浏览器检查桌面首页、证书页/内部 Hero、页脚、客服浮窗，以及 390 × 844 移动首页。
 - 浏览器计算样式确认 Hero、内部 Hero、证书区、页脚及客服深色 base 为 `rgb(11, 61, 90)`；移动端标题未越界，页面未出现横向溢出；控制台 warning/error 为空。
-- 本轮未修改内容、结构、资源或遮罩，未执行完整五页交互回归、真实设备测试或线上验证。
-- 状态：已实现、已本地验证、未提交、未部署、尚未获得客户确认。
+- 本轮未修改内容、结构、资源或遮罩，未执行完整五页交互回归或真实设备测试。
+- 提交与部署：`6ad9fdd` 已推送；GitHub Pages run `33873944321` 的 build/deploy 均于 2026-09-04 成功。
+- 线上复核：公开站加载 `main-B5NKC4jM.css`；Hero、内部 Hero、证书区和页脚的计算背景均为 `rgb(11, 61, 90)`；证书页仍渲染 11 个文档入口；浏览器控制台 warning/error 为空。
+- 状态：已实现、已本地验证、已提交、已推送、已部署；尚未获得客户确认。
