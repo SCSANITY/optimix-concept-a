@@ -50,24 +50,6 @@ export function initHeader() {
   populateContactLink(header.querySelector('[data-contact-link]'));
   populateContactLink(header.querySelector('[data-mobile-contact-link]'));
 
-  const hero = document.querySelector('[data-hero]');
-  let headerThemeFrame = null;
-
-  const updateHeaderTheme = () => {
-    headerThemeFrame = null;
-    const isOverHero = hero && hero.getBoundingClientRect().bottom > header.offsetHeight + 24;
-    header.classList.toggle('is-over-hero', Boolean(isOverHero));
-  };
-
-  const requestHeaderThemeUpdate = () => {
-    if (headerThemeFrame) return;
-    headerThemeFrame = window.requestAnimationFrame(updateHeaderTheme);
-  };
-
-  updateHeaderTheme();
-  window.addEventListener('scroll', requestHeaderThemeUpdate, { passive: true });
-  window.addEventListener('resize', requestHeaderThemeUpdate);
-
   if (!menuButton || !mobileMenu) return;
 
   const setMenuState = (isOpen) => {

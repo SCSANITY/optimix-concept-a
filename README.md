@@ -5,10 +5,12 @@ Multi-page front-end design prototype for Optimix, built with semantic HTML, Tai
 ## Current prototype surface
 
 - `index.html` — concise homepage with corporate-film hero, portfolio gateways, and featured project proof
-- `products.html` — nine category labels and three supplied flagship products with downloadable data sheets
-- `projects.html` — filterable register of 30 supplied projects and the source project casebook
+- `products.html` — compact media-first directory of ten top-level product categories with locally stored reference imagery from the Optimix website
+- `product-category.html?category=...` — Tiling, Waterproofing, and Repairing range views with product-type filtering
+- `product-detail.html?product=...` — data-driven technical detail views for TA313, TA328, TG410E, WP533, and RM760
+- `projects.html` — filterable register of 31 supplied projects, a Beijing Daxing Airport feature story, and the source project casebook
 - `certifications.html` — 11 supplied credentials grouped into five families with source-document links
-- `company.html` — compact company introduction and manufacturer facts
+- `company.html` — compact company introduction and current manufacturer facts from the supplied company brochure
 - Shared responsive navigation, contact footer, scroll/reveal motion, and a local demonstration support assistant
 
 This remains a review prototype: it has no CMS, backend, live support service, production localization, or final SEO setup. All entry pages intentionally use `noindex, nofollow`.
@@ -52,5 +54,5 @@ Vite expands the `@include` comments at build time. There is no client-side temp
 
 - The official Optimix logo and supplied client documents are retained unchanged.
 - The Hero uses an Optimix-supplied corporate film: an unchanged full-film copy plus a derived muted homepage loop and poster. See `docs/ASSET_PROVENANCE.md`.
-- Product, project, and certification presentation media are derived from supplied client documents; source and transformation limits are recorded in `docs/ASSET_PROVENANCE.md`.
+- Product media combines client-supplied data sheets with locally copied imagery from the official Optimix website; project and certification presentation media comes from client-supplied material. Source, rights, and transformation limits are recorded in `docs/ASSET_PROVENANCE.md`.
 - Approved system technical drawings remain pending and the existing system data/partials are not part of the active page entries.

@@ -59,14 +59,60 @@ function createProjectCard(project, index, settings) {
 
   const metadata = document.createElement('dl');
   metadata.className = 'mt-6 grid gap-4 border-t border-ink/10 pt-5';
-  metadata.append(
-    createMetaRow(settings.supplyYearsLabel, project.supplyYears),
-    createMetaRow(settings.productsLabel, project.products.join(' · ')),
-  );
+  if (project.supplyYears) {
+    metadata.append(createMetaRow(settings.supplyYearsLabel, project.supplyYears));
+  }
+  if (project.products?.length) {
+    metadata.append(createMetaRow(settings.productsLabel, project.products.join(' · ')));
+  }
 
   body.append(name, sourceName, metadata);
   article.append(figure, body);
   return article;
+}
+
+function initFeaturedProject(root) {
+  const featureRoot = root.querySelector('[data-featured-project-case]');
+  const settings = content.featuredProjectCase;
+  if (!featureRoot || !settings) return;
+
+  const project = content.projects.find((item) => item.slug === settings.projectSlug);
+  if (!project) {
+    featureRoot.hidden = true;
+    return;
+  }
+
+  featureRoot.querySelector('[data-featured-project-eyebrow]').textContent = settings.eyebrow;
+  featureRoot.querySelector('[data-featured-project-title]').textContent = settings.title;
+  featureRoot.querySelector('[data-featured-project-description]').textContent = settings.description;
+  featureRoot.querySelector('[data-featured-project-location]').textContent = project.location;
+  featureRoot.querySelector('[data-featured-project-name]').textContent = project.name;
+  featureRoot.querySelector('[data-featured-project-source-name]').textContent = project.sourceName;
+  featureRoot.querySelector('[data-featured-project-scope-label]').textContent = settings.scopeLabel;
+  featureRoot.querySelector('[data-featured-project-scope]').textContent = settings.scope;
+  featureRoot.querySelector('[data-featured-project-status-label]').textContent = settings.statusLabel;
+  featureRoot.querySelector('[data-featured-project-status]').textContent = settings.status;
+
+  const hero = featureRoot.querySelector('[data-featured-project-image]');
+  hero.src = project.imageUrl;
+  hero.alt = project.imageAlt;
+
+  const gallery = featureRoot.querySelector('[data-featured-project-gallery]');
+  settings.gallery.forEach((item) => {
+    const figure = document.createElement('figure');
+    figure.className = 'featured-project-case__gallery-item';
+
+    const image = document.createElement('img');
+    image.src = item.imageUrl;
+    image.alt = item.imageAlt;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+
+    const caption = document.createElement('figcaption');
+    caption.textContent = item.label;
+    figure.append(image, caption);
+    gallery.append(figure);
+  });
 }
 
 function createFilterButton(filter, count) {
@@ -123,6 +169,8 @@ export function initProjects() {
   root.querySelector('[data-project-mainland-count]').textContent = mainlandProjects.length;
   root.querySelector('[data-project-mainland-label]').textContent = settings.mainlandCountLabel;
   root.querySelector('[data-project-filter-label]').textContent = settings.filterLabel;
+
+  initFeaturedProject(root);
 
   const casebook = root.querySelector('[data-project-casebook]');
   casebook.href = settings.casebookUrl;

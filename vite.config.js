@@ -52,6 +52,8 @@ export default defineConfig({
       input: {
         home: path.resolve(projectRoot, 'index.html'),
         products: path.resolve(projectRoot, 'products.html'),
+        productCategory: path.resolve(projectRoot, 'product-category.html'),
+        productDetail: path.resolve(projectRoot, 'product-detail.html'),
         projects: path.resolve(projectRoot, 'projects.html'),
         certifications: path.resolve(projectRoot, 'certifications.html'),
         company: path.resolve(projectRoot, 'company.html'),

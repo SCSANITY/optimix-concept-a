@@ -53,7 +53,7 @@
       "slug": "projects",
       "index": "01",
       "title": "Project Portfolio",
-      "description": "Thirty documented projects across Hong Kong and Mainland China.",
+      "description": "Thirty-one documented projects across Hong Kong and Mainland China.",
       "href": "./projects.html",
       "linkLabel": "Explore Projects",
       "imageUrl": "./media/projects/01-hkia-third-runway.jpg",
@@ -86,16 +86,16 @@
     "projectSlug": "hkia-third-runway",
     "ctaLabel": "View the Project Portfolio",
     "ctaHref": "./projects.html",
-    "portfolioLabel": "30 documented projects"
+    "portfolioLabel": "31 documented projects"
   },
   "internalPages": {
     "products": {
       "eyebrow": "Products & Material Systems",
-      "title": "Technical materials, specified by application.",
-      "description": "Explore Optimix product categories and three supplied flagship products for demanding tiling systems.",
+      "title": "Technical materials, organised by application.",
+      "description": "Explore ten Optimix product categories before moving into individual product ranges and technical details.",
       "imageUrl": "./media/products/optimix-ta328-application.jpeg",
       "imageAlt": "Optimix flexible tile adhesive being applied on site",
-      "proof": "9 product categories"
+      "proof": "10 product categories"
     },
     "projects": {
       "eyebrow": "Selected Project Portfolio",
@@ -103,7 +103,7 @@
       "description": "A supplied portfolio of landmark infrastructure, hospitality, education and commercial projects.",
       "imageUrl": "./media/projects/02-cheung-kong-center-ii.jpg",
       "imageAlt": "Cheung Kong Center II project in Central, Hong Kong",
-      "proof": "30 documented projects"
+      "proof": "31 documented projects"
     },
     "certifications": {
       "eyebrow": "Certifications & Credentials",
@@ -123,23 +123,23 @@
     }
   },
   "companyStats": [
-    { "slug": "experience", "value": "20+", "label": "Years Experience" },
-    { "slug": "capacity", "value": "200k", "label": "Tons Annual Capacity" },
-    { "slug": "certification", "value": "ISO", "label": "9001 & 14001 Certified" },
-    { "slug": "projects", "value": "100+", "label": "Projects Completed" }
+    { "slug": "established", "value": "2000", "label": "Established in Hong Kong" },
+    { "slug": "capacity", "value": "600k", "label": "Tonnes Combined Annual Capacity" },
+    { "slug": "formulations", "value": "120+", "label": "Dry Mortar Formulations" },
+    { "slug": "facilities", "value": "2", "label": "Manufacturing Facilities" }
   ],
   "corporate": {
     "eyebrow": "Corporate Introduction",
     "title": "Technical materials engineered for Hong Kong construction.",
-    "description": "Founded in 2000, Optimix researches and manufactures technical dry mortar systems for demanding construction applications.",
+    "description": "Founded in Hong Kong in 2000, Optimix develops and manufactures technical dry mortar systems through two Greater Bay Area production facilities.",
     "profileLabel": "Manufacturer Profile",
     "facts": [
       { "label": "Established", "value": "2000 · Hong Kong" },
-      { "label": "Core Expertise", "value": "Technical Dry Mortar" },
-      { "label": "Capabilities", "value": "Research & Manufacturing" },
-      { "label": "Standards", "value": "ISO 9001 & 14001" }
+      { "label": "Manufacturing", "value": "Dongguan · Zhuhai" },
+      { "label": "Portfolio", "value": "120+ Dry Mortar Formulations" },
+      { "label": "Management Systems", "value": "ISO 9001 · 14001 · 45001 · 50001" }
     ],
-    "proofStatSlug": "projects"
+    "proofStatSlug": "capacity"
   },
   "systemsSection": {
     "eyebrow": "System Solutions",
@@ -156,73 +156,345 @@
     { "slug": "self-leveling-overlayment", "name": "Self-Leveling Overlayment System", "description": null, "layers": [] }
   ],
   "productCategories": [
-    { "slug": "plastering", "name": "Plastering", "tagline": null, "productCount": null },
-    { "slug": "tiling", "name": "Tiling", "tagline": null, "productCount": null },
-    { "slug": "waterproofing", "name": "Waterproofing", "tagline": null, "productCount": null },
-    { "slug": "grouting", "name": "Grouting", "tagline": null, "productCount": null },
-    { "slug": "repairing", "name": "Repairing", "tagline": null, "productCount": null },
-    { "slug": "flooring", "name": "Flooring", "tagline": null, "productCount": null },
-    { "slug": "concreting", "name": "Concreting", "tagline": null, "productCount": null },
-    { "slug": "emulsion", "name": "Emulsion", "tagline": null, "productCount": null },
-    { "slug": "eco-build", "name": "Eco Build", "tagline": null, "productCount": null }
+    {
+      "slug": "plastering",
+      "name": "Plastering",
+      "benefits": ["Consistent quality", "Enhance strength and minimise curing time", "Reduce risk of delamination", "Improve surface finish"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-plastering.jpg",
+      "imageAlt": "Plastering application shown on the Optimix product catalogue"
+    },
+    {
+      "slug": "tiling",
+      "name": "Tiling",
+      "tagline": "Adhesive and grout products documented for tile installation and joint finishing.",
+      "catalogueDescription": "Two tile adhesive products and one high-performance tile grout are documented in the current Tiling range.",
+      "benefits": ["Good bond strength", "Extended open time", "Water resistance", "Good slip resistance"],
+      "productCount": 3,
+      "familyCount": 2,
+      "status": "available",
+      "imageUrl": "./media/products/category-tiling.jpg",
+      "imageAlt": "Architectural tiling project shown on the Optimix product catalogue",
+      "href": "./product-category.html?category=tiling"
+    },
+    {
+      "slug": "waterproofing",
+      "name": "Waterproofing",
+      "tagline": "Cementitious waterproofing technology for wet areas, water-retaining structures and exposed substrates.",
+      "catalogueDescription": "The current supplied range introduces WP533, a fast-drying two-part cementitious waterproofing membrane.",
+      "benefits": ["Outstanding waterproof properties", "Vapour permeable", "Excellent adhesion to substrates", "Applicable to damp surfaces"],
+      "productCount": 1,
+      "familyCount": 1,
+      "status": "available",
+      "imageUrl": "./media/products/category-waterproofing.jpg",
+      "imageAlt": "Waterfront construction project shown on the Optimix product catalogue",
+      "href": "./product-category.html?category=waterproofing"
+    },
+    {
+      "slug": "grouting",
+      "name": "Grouting",
+      "benefits": ["Dimensional stability", "Ease of application", "Enhanced durability", "Eliminate segregation"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-grouting.jpg",
+      "imageAlt": "Commercial building project shown on the Optimix product catalogue"
+    },
+    {
+      "slug": "repairing",
+      "name": "Repairing",
+      "tagline": "High-performance repair materials designed for rapid strength gain, vertical build and demanding concrete remediation.",
+      "catalogueDescription": "The current supplied range introduces RM760, a rapid-setting, shrinkage-compensated repair mortar.",
+      "benefits": ["Good bonding to substrates", "Low shrinkage", "High build", "Chloride and carbonation resistance"],
+      "productCount": 1,
+      "familyCount": 1,
+      "status": "available",
+      "imageUrl": "./media/products/category-repairing.jpg",
+      "imageAlt": "Concrete repair application shown on the Optimix product catalogue",
+      "href": "./product-category.html?category=repairing"
+    },
+    {
+      "slug": "flooring",
+      "name": "Flooring",
+      "benefits": ["Low shrinkage", "Good workability", "Sound solid surface", "Compatible with common finishes"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-flooring.jpg",
+      "imageAlt": "Resort flooring project shown on the Optimix product catalogue"
+    },
+    {
+      "slug": "concreting",
+      "name": "Concreting",
+      "benefits": ["Consistent quality", "Easy to handle and deliver", "No on-site batching", "Better application control"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-concreting.jpg",
+      "imageAlt": "Concrete construction project shown on the Optimix product catalogue"
+    },
+    {
+      "slug": "emulsion",
+      "name": "Emulsion",
+      "benefits": ["Excellent adhesion", "Improved flexural strength", "Enhanced water resistance", "Low VOCs and odour"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-emulsion.jpg",
+      "imageAlt": "High-rise project shown on the Optimix product catalogue"
+    },
+    {
+      "slug": "eco-build",
+      "name": "Eco Build",
+      "benefits": ["Alkaline and acid resistance", "Very hard surface finish", "Ultra-low CO₂ emissions", "Extended durability"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-eco-build.png",
+      "imageAlt": "Infrastructure project shown on the Optimix Eco Build catalogue"
+    },
+    {
+      "slug": "hkha-district-term-contract-solutions",
+      "name": "HKHA District Term Contract Solutions",
+      "benefits": ["Compliant with HKHA specification", "Proven track record", "Consistent quality", "Technical advisory support"],
+      "productCount": null,
+      "status": "pending",
+      "imageUrl": "./media/products/category-hkha-solutions.jpg",
+      "imageAlt": "HKHA product catalogue cover supplied through the Optimix website"
+    }
   ],
   "productsSection": {
-    "eyebrow": "Product Categories",
-    "title": "Materials across critical construction layers.",
-    "description": "Nine product categories support construction, finishing, protection and repair applications.",
+    "eyebrow": "Product Catalogue",
+    "title": "Ten fields of material performance.",
+    "description": "Choose an application field, move into its technical range, then open the product record and data sheet required for specification.",
     "itemLabel": "Product Category",
-    "featuredEyebrow": "Featured Technical Products",
-    "featuredTitle": "Three products. One complete tiling system.",
-    "featuredDescription": "Specified adhesives and grout for general tiling, demanding installations and durable joint finishing.",
-    "dataSheetLabel": "View Data Sheet"
+    "availableLabel": "Documented range",
+    "pendingLabel": "Structure preview",
+    "imagePendingLabel": "Approved product image pending",
+    "openCategoryLabel": "Explore range",
+    "pendingCategoryLabel": "Range content pending",
+    "sourceLabel": "Category structure and imagery mapped from the Optimix website · production originals and rights review required"
   },
+  "productCategoryPage": {
+    "catalogueEyebrow": "Documented Product Range",
+    "catalogueTitle": "Products organised by technical type.",
+    "allLabel": "All products",
+    "dataSheetLabel": "View data sheet",
+    "detailLabel": "View product details",
+    "backLabel": "All product categories",
+    "sourceLabel": "Client-supplied technical data",
+    "productCountLabel": "Documented products",
+    "familyCountLabel": "Product types"
+  },
+  "productFamilies": [
+    {
+      "slug": "tile-adhesive",
+      "categorySlug": "tiling",
+      "name": "Tile Adhesive",
+      "description": "Adhesive products for interior and exterior tile installation.",
+      "productSlugs": ["ta313", "ta328"]
+    },
+    {
+      "slug": "tile-grout",
+      "categorySlug": "tiling",
+      "name": "Tile Grout",
+      "description": "Grout products for durable tile joint finishing.",
+      "productSlugs": ["tg410e"]
+    },
+    {
+      "slug": "cementitious-waterproofing",
+      "categorySlug": "waterproofing",
+      "name": "Cementitious Waterproofing",
+      "description": "Polymer-cement waterproofing coatings for wet and exposed substrates.",
+      "productSlugs": ["wp533"]
+    },
+    {
+      "slug": "repair-mortar",
+      "categorySlug": "repairing",
+      "name": "Repair Mortar",
+      "description": "High-performance mortars for structural and general concrete repair.",
+      "productSlugs": ["rm760"]
+    }
+  ],
   "featuredProducts": [
     {
       "slug": "ta313",
+      "categorySlug": "tiling",
+      "familySlug": "tile-adhesive",
       "code": "TA313",
       "name": "Tile Adhesive (Semi-Flexible)",
       "standard": "EN 12004 C1TE",
       "description": "A polymer-modified cementitious adhesive for fixing interior and exterior ceramic tiles, available in grey or white.",
+      "featured": true,
+      "sourceEdition": "Data sheet dated 2025-11-17",
       "highlights": [
-        "General interior and exterior tiling",
-        "Extended open time and slight flexibility",
-        "Suitable for MiC factory and site works"
+        "Extended open time with good slip resistance",
+        "Semi-flexible, water-resistant bond performance",
+        "Locally produced low-VOC formulation"
       ],
-      "imageUrl": "./media/products/optimix-ta313-application.jpeg",
-      "imageAlt": "TA313 tile adhesive being used to install wall tiles",
+      "typicalUses": [
+        "General-purpose interior and exterior wall and floor tiling",
+        "Ceramic, homogeneous, terrazzo, reconstituted and selected natural stone tiles",
+        "MiC factory production and on-site installation"
+      ],
+      "technicalData": [
+        { "label": "Classification", "value": "EN 12004 C1TE" },
+        { "label": "Packing", "value": "25 kg" },
+        { "label": "Wet density", "value": "~1,600 kg/m³" },
+        { "label": "Yield", "value": "~19.7 L / ~4.0 m² at 5 mm" },
+        { "label": "Pot life", "value": "~90 min at 22°C" },
+        { "label": "VOC", "value": "≤ 10 g/L" }
+      ],
+      "imageUrl": "./media/products/optimix-ta313-packshot.jpg",
+      "imageAlt": "Optimix TA313 Tile Adhesive packaging",
+      "detailHref": "./product-detail.html?product=ta313",
       "dataSheetUrl": "./documents/products/optimix-ta313-data-sheet-en.pdf"
     },
     {
       "slug": "ta328",
+      "categorySlug": "tiling",
+      "familySlug": "tile-adhesive",
       "code": "TA328",
       "name": "Tile Adhesive (Flexible)",
       "standard": "EN 12004 C2TE S1",
       "description": "A high-polymer, high-strength flexible adhesive developed for interior and exterior wall and floor tile installations.",
+      "featured": false,
+      "sourceEdition": "Data sheet dated 2025-11-17",
       "highlights": [
-        "Designed for large and heavy tiles",
         "High adhesive strength and flexibility",
-        "Suitable for MiC factory and site works"
+        "Designed for large and heavy tiles",
+        "Waterproof and water-resistant performance"
       ],
-      "imageUrl": "./media/products/optimix-ta328-application.jpeg",
-      "imageAlt": "TA328 flexible tile adhesive being applied during wall tiling",
+      "typicalUses": [
+        "Interior and exterior wall and floor tiling",
+        "Large and heavy ceramic, homogeneous and selected natural stone tiles",
+        "MiC factory production and on-site installation"
+      ],
+      "technicalData": [
+        { "label": "Classification", "value": "EN 12004 C2TE S1" },
+        { "label": "Packing", "value": "25 kg" },
+        { "label": "Wet density", "value": "~1,600 kg/m³" },
+        { "label": "Yield", "value": "~19.2 L / ~4.0 m² at 5 mm" },
+        { "label": "Pot life", "value": "~90 min at 28°C" },
+        { "label": "Deformation", "value": "~3.8 mm" }
+      ],
+      "imageUrl": "./media/products/optimix-ta328-packshot.jpg",
+      "imageAlt": "Optimix TA328 Tile Adhesive packaging",
+      "detailHref": "./product-detail.html?product=ta328",
       "dataSheetUrl": "./documents/products/optimix-ta328-data-sheet-en.pdf"
     },
     {
       "slug": "tg410e",
+      "categorySlug": "tiling",
+      "familySlug": "tile-grout",
       "code": "TG410E",
       "name": "Tile Grout (High Performance)",
       "standard": "EN 13888 CG2 WA",
       "description": "A decorative polymer-modified cementitious grout for strong, hard-wearing and water-resistant tile joints.",
+      "featured": false,
+      "sourceEdition": "Data sheet dated 2025-05-24",
       "highlights": [
+        "Rigid, durable and waterproof surface finish",
         "Fine, standard and coarse textures",
-        "Recommended for joint widths from 1–15 mm",
         "Efflorescence and mould-growth resistant"
       ],
-      "imageUrl": "./media/products/optimix-tg410e-application.jpeg",
-      "imageAlt": "TG410E high-performance tile grout being finished between floor tiles",
+      "typicalUses": [
+        "Interior and exterior wall and floor tile joints",
+        "Joint widths from 1 mm to 15 mm across three texture grades",
+        "Potable water tanks, swimming pools and MiC applications"
+      ],
+      "technicalData": [
+        { "label": "Classification", "value": "EN 13888 CG2 WA" },
+        { "label": "Packing", "value": "2 kg or 25 kg" },
+        { "label": "Wet density", "value": "~1,800 kg/m³" },
+        { "label": "Pot life", "value": "~45 min at 30°C" },
+        { "label": "Compressive strength", "value": "~30 MPa dry cured" },
+        { "label": "Water absorption", "value": "0.8 g after 30 min" }
+      ],
+      "imageUrl": "./media/products/optimix-tg410e-packshot.jpg",
+      "imageAlt": "Optimix TG410E Tile Grout packaging",
+      "detailHref": "./product-detail.html?product=tg410e",
       "dataSheetUrl": "./documents/products/optimix-tg410e-data-sheet-en.pdf"
+    },
+    {
+      "slug": "wp533",
+      "categorySlug": "waterproofing",
+      "familySlug": "cementitious-waterproofing",
+      "code": "WP533",
+      "name": "Waterproofing Slurry (Semi-Flexible)",
+      "standard": "GB/T 23445 Type JS II",
+      "description": "A fast-drying two-part polymer-cement composite coating that forms a semi-flexible waterproofing membrane.",
+      "featured": true,
+      "sourceEdition": "Data sheet dated 2025-01-16",
+      "highlights": [
+        "Fast-drying two-component system",
+        "Semi-flexible membrane with strong substrate adhesion",
+        "Suitable for damp mineral surfaces"
+      ],
+      "typicalUses": [
+        "Wet rooms, balconies, roofs and other tiled waterproofing systems",
+        "Concrete and cementitious substrates requiring a seamless membrane",
+        "Areas where vapour permeability and adhesion to damp surfaces are important"
+      ],
+      "technicalData": [
+        { "label": "Classification", "value": "GB/T 23445 Type JS II" },
+        { "label": "Tensile strength", "value": "> 1.8 MPa" },
+        { "label": "Elongation at break", "value": "> 80%" },
+        { "label": "Water impermeability", "value": "0 mm at 0.5 MPa / 3 days" },
+        { "label": "Packing", "value": "35 kg or 14 kg set" },
+        { "label": "Shelf life", "value": "12 months" }
+      ],
+      "imageUrl": "./media/products/optimix-wp533-packshot.png",
+      "imageAlt": "Optimix WP533 Waterproofing Slurry packaging",
+      "detailHref": "./product-detail.html?product=wp533",
+      "dataSheetUrl": "./documents/products/optimix-wp533-data-sheet-en.pdf"
+    },
+    {
+      "slug": "rm760",
+      "categorySlug": "repairing",
+      "familySlug": "repair-mortar",
+      "code": "RM760",
+      "name": "Repair Mortar (High Performance Rapid Setting)",
+      "standard": "High-performance rapid-setting repair mortar",
+      "description": "A polymer-modified, shrinkage-compensated mortar for rapid concrete repair with high early strength and substantial vertical build.",
+      "featured": true,
+      "sourceEdition": "Data sheet dated 2022-03-28",
+      "highlights": [
+        "High early compressive strength",
+        "Up to 35 mm vertical build per layer",
+        "Rapid-setting, low-shrinkage repair performance"
+      ],
+      "typicalUses": [
+        "Rapid repair of concrete surfaces, edges and local defects",
+        "Vertical and overhead repair where high build is required",
+        "Repairs requiring rapid return to subsequent construction work"
+      ],
+      "technicalData": [
+        { "label": "Compressive strength", "value": "> 20 MPa at 6 hours" },
+        { "label": "28-day strength", "value": "> 40 MPa" },
+        { "label": "Vertical build", "value": "Up to 35 mm per layer" },
+        { "label": "Overhead build", "value": "Up to 25 mm per layer" },
+        { "label": "Pot life", "value": "~15 min at 27°C" },
+        { "label": "Packing / shelf life", "value": "15 kg / 6 months" }
+      ],
+      "imageUrl": "./media/products/optimix-rm760-packshot.jpg",
+      "imageAlt": "Optimix RM760 Repair Mortar packaging",
+      "detailHref": "./product-detail.html?product=rm760",
+      "dataSheetUrl": "./documents/products/optimix-rm760-data-sheet-en.pdf"
     }
   ],
+  "productDetailPage": {
+    "backLabel": "Back to product range",
+    "flagshipLabel": "Flagship product",
+    "supportingLabel": "Documented product",
+    "sourceLabel": "Technical source",
+    "dataSheetLabel": "Download technical data sheet",
+    "overviewEyebrow": "Technical Overview",
+    "usesTitle": "Typical uses",
+    "benefitsTitle": "Performance benefits",
+    "technicalEyebrow": "Specification Snapshot",
+    "technicalTitle": "Key technical data.",
+    "technicalDescription": "Selected values are transcribed from the supplied English data sheet. The full document remains the governing technical reference.",
+    "relatedEyebrow": "Continue Exploring",
+    "relatedTitle": "More from this product range",
+    "relatedLabel": "View product"
+  },
   "certificationsSection": {
     "eyebrow": "Certifications & Credentials",
     "title": "Credentials behind the specification.",
@@ -361,7 +633,7 @@
   "projectsSection": {
     "eyebrow": "Selected Project Portfolio",
     "title": "Materials proven across complex construction.",
-    "description": "Thirty supplied projects spanning aviation, transport, hospitality, healthcare, education and commercial development.",
+    "description": "Thirty-one supplied projects spanning aviation, transport, hospitality, healthcare, education and commercial development.",
     "projectCountLabel": "Documented projects",
     "hongKongCountLabel": "Hong Kong projects",
     "mainlandCountLabel": "Mainland projects",
@@ -379,6 +651,33 @@
     "casebookLabel": "Download project casebook",
     "casebookUrl": "./documents/projects/optimix-selected-projects-2022-2024.pdf",
     "nameTranslationStatus": "Working English translations pending Optimix client approval"
+  },
+  "featuredProjectCase": {
+    "projectSlug": "beijing-daxing-international-airport",
+    "eyebrow": "New Project Record · Aviation Infrastructure",
+    "title": "A complete material story, from delivery to finished surface.",
+    "description": "Client-supplied site records connect Optimix SF878 delivery and application with the completed parking-area flooring at Beijing Daxing International Airport.",
+    "scopeLabel": "Documented scope",
+    "scope": "SF878 flooring works · parking facilities",
+    "statusLabel": "Source status",
+    "status": "Client-supplied site record · supply period pending confirmation",
+    "gallery": [
+      {
+        "imageUrl": "./media/projects/beijing-daxing-airport/beijing-daxing-car-park-finish-01.jpg",
+        "imageAlt": "Completed grey flooring and orange columns in a Beijing Daxing airport parking area",
+        "label": "Completed surface"
+      },
+      {
+        "imageUrl": "./media/projects/beijing-daxing-airport/beijing-daxing-sf878-delivery.jpg",
+        "imageAlt": "Optimix SF878 material delivered by forklift at the Beijing Daxing project site",
+        "label": "Material delivery"
+      },
+      {
+        "imageUrl": "./media/projects/beijing-daxing-airport/beijing-daxing-sf878-application.jpg",
+        "imageAlt": "Spiked roller used during flooring application at the Beijing Daxing project site",
+        "label": "Application process"
+      }
+    ]
   },
   "projects": [
     {
@@ -740,6 +1039,19 @@
       "imageUrl": "./media/projects/30-tencent-digital-building-shenzhen.jpg",
       "imageAlt": "Tencent Digital Building in Shenzhen project photograph",
       "featured": false
+    },
+    {
+      "slug": "beijing-daxing-international-airport",
+      "name": "Beijing Daxing International Airport",
+      "sourceName": "北京大兴国际机场",
+      "location": "Beijing, Mainland China",
+      "region": "mainland-china",
+      "supplyYears": null,
+      "products": ["SF878"],
+      "imageUrl": "./media/projects/beijing-daxing-airport/beijing-daxing-airport-aerial.jpg",
+      "imageAlt": "Aerial site record of Beijing Daxing International Airport",
+      "featured": true,
+      "sourceStatus": "Client-supplied site record; exact supply period pending confirmation"
     }
   ],
   "downloadsSection": {
@@ -826,7 +1138,7 @@
       {
         "id": "products",
         "label": "Explore product categories",
-        "response": "Optimix products are organised into nine construction material categories on this page.",
+        "response": "Optimix products are organised into ten construction material categories on this page.",
         "actionLabel": "View Products",
         "actionHref": "./products.html"
       },

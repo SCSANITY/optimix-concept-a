@@ -104,6 +104,7 @@ function initProjectProof() {
   root.querySelector('[data-project-proof-eyebrow]').textContent = settings.eyebrow;
   root.querySelector('[data-project-proof-title]').textContent = settings.title;
   root.querySelector('[data-project-proof-portfolio-label]').textContent = settings.portfolioLabel;
+  root.querySelector('[data-project-proof-index]').textContent = `01 / ${String(content.projects.length).padStart(2, '0')}`;
   root.querySelector('[data-project-proof-location]').textContent = project.location;
   root.querySelector('[data-project-proof-name]').textContent = project.name;
   root.querySelector('[data-project-proof-years]').textContent = project.supplyYears;

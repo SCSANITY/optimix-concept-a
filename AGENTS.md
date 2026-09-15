@@ -22,7 +22,7 @@
 ## 开发入口
 
 - `data/content.json`：当前内容模型和页面数据的主要入口。
-- `*.html`：五个 Vite 多页面入口；通过 `<!-- @include ... -->` 引入 `partials/`。
+- `*.html`：七个 Vite 多页面入口；通过 `<!-- @include ... -->` 引入 `partials/`。
 - `partials/`：固定语义结构与 WordPress 映射说明。
 - `assets/js/sections/`：按 section 隔离的原生 JavaScript 行为。
 - `assets/css/main.css` 与 `tailwind.config.js`：设计 token、排版、布局、响应式和动效。
@@ -46,7 +46,7 @@ Windows PowerShell 若因执行策略阻止 `npm.ps1`，使用等价的 `npm.cmd
 - 代码、样式、内容模型或构建配置变更：至少运行 `npm run build`，并按影响范围验证相关页面、桌面/移动布局、关键交互、控制台和资源请求。
 - 仅文档变更：无需机械运行构建；只做支撑文档结论所需的只读检查。
 - 动效变更同时检查 `prefers-reduced-motion`；Hero 媒体同时考虑省流量/慢网络的 poster 回退。
-- 五个页面入口、PDF 链接和相对资源路径是多页面部署的基本回归范围。
+- 七个页面入口、PDF 链接和相对资源路径是多页面部署的基本回归范围。
 - 部署只有在用户明确要求时执行。当前流程为 `main` push 触发 GitHub Pages；推送、CI 成功、公开 URL 可访问和客户确认必须分别记录。
 - 在 `docs/DEVELOPMENT.md` 记录检查日期、命令/依据、结果与限制；不要把旧构建或历史部署写成本轮验证通过。
 

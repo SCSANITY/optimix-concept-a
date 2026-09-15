@@ -1,0 +1,63 @@
+<!--
+  CMS MAPPING
+  - Category hero and summary → product_category taxonomy term fields
+  - Product type navigation → child terms of hierarchical product_category taxonomy
+  - Product cards → CPT: product archive query
+  - Data sheet → product document field
+  - Query-string routing is Demo-only; WordPress should use taxonomy permalinks
+-->
+<div data-product-category-page>
+  <section class="product-category-hero relative isolate overflow-hidden bg-deep-blue text-white" data-category-hero>
+    <img class="product-category-hero__image absolute inset-0 h-full w-full object-cover" alt="" data-category-hero-image>
+    <div class="product-category-hero__grade absolute inset-0" aria-hidden="true"></div>
+    <div class="product-category-hero__grid absolute inset-0" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto flex min-h-[74svh] max-w-site flex-col justify-between px-5 pb-12 pt-10 sm:px-8 sm:pb-16 lg:px-10 lg:pb-20 lg:pt-14">
+      <a class="product-category-back" href="./products.html">
+        <span aria-hidden="true">←</span>
+        <span data-category-back-label></span>
+      </a>
+
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-8" data-reveal>
+          <p class="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.17em] text-white/64 sm:text-xs">
+            <span class="h-0.5 w-8 bg-brand-red" aria-hidden="true"></span>
+            <span data-category-eyebrow></span>
+          </p>
+          <h1 class="mt-6 font-heading text-[4.35rem] font-extrabold leading-[0.82] tracking-[-0.075em] text-white sm:text-8xl lg:text-[9rem]" data-category-title></h1>
+          <p class="mt-8 max-w-[640px] text-base leading-[1.7] text-white/70 sm:text-lg" data-category-description></p>
+        </div>
+
+        <dl class="product-category-hero__metrics lg:col-span-4" data-reveal>
+          <div>
+            <dt data-category-product-count-label></dt>
+            <dd data-category-product-count></dd>
+          </div>
+          <div>
+            <dt data-category-family-count-label></dt>
+            <dd data-category-family-count></dd>
+          </div>
+          <div>
+            <dt>Source</dt>
+            <dd class="text-base" data-category-source></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-catalogue overflow-hidden bg-paper py-20 sm:py-24 lg:py-32" id="category-products" data-category-catalogue>
+    <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16" data-reveal>
+        <div class="lg:col-span-7">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brand-red" data-category-catalogue-eyebrow></p>
+          <h2 class="max-w-[740px] font-heading text-[2.125rem] font-bold leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.5rem]" data-category-catalogue-title></h2>
+        </div>
+        <p class="max-w-[520px] text-base leading-[1.7] text-ink/70 sm:text-lg lg:col-span-5" data-category-catalogue-description></p>
+      </div>
+
+      <div class="category-family-nav mt-12" aria-label="Product types" data-category-family-nav data-reveal></div>
+      <div class="category-product-grid mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3" data-category-product-list></div>
+    </div>
+  </section>
+</div>
