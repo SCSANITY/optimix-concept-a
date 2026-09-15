@@ -98,11 +98,12 @@
 - 实际仓库：`D:/SCSANITY/数字游民/Optimix/WebA/concept-a`
 - 当前分支：`main`，跟踪 `origin/main`
 - 本轮开始时的已提交基线：`96b55ad`（`Record theme deployment`），本地 `HEAD` 与 `origin/main` 一致
+- 当前功能发布提交：`fd068aa`（`Expand product catalogue and project proof`），已于 2026-09-16 推送并通过 GitHub Pages；其后的文档同步提交不改变构建页面功能。
 - 远端：`https://github.com/SCSANITY/optimix-concept-a.git`
 - 2026-09-04 接入文档已提交为 `23991d7`（`Add project development documentation`）。外层 onboarding response 不属于此独立仓库。
 - 同日主题色代码已提交为 `6ad9fdd`（`Lighten the deep blue theme`）。
 - 两个提交均已推送至 `origin/main`；主题部署和线上复核依据见第 10 节。
-- 2026-09-07 至 2026-09-15 的 Product 信息架构、全局 Header、内部页背景和紧凑目录修改在本轮开始时仍未提交；2026-09-16 在保留这些修改的基础上继续加入产品资料、大兴机场案例、公司事实、详情页和工程文档。最终提交、远端与 Pages 依据记录在第 14 节。
+- 2026-09-07 至 2026-09-15 的 Product 信息架构、全局 Header、内部页背景和紧凑目录修改在本轮开始时仍未提交；2026-09-16 在保留这些修改的基础上继续加入产品资料、大兴机场案例、公司事实、详情页和工程文档，并统一收束为 `fd068aa`。远端与 Pages 依据记录在第 14 节。
 
 当前 Codex 启动目录 `C:/Users/SCSANITY/Documents/Codex/2026-09-04/optimix-codex-d-scsanity-optimix-weba` 不是 Git 仓库，也不是上述仓库的已登记 worktree。后续开发应先确认正在操作的仓库根目录，避免把工作写进临时工作目录。
 
@@ -240,9 +241,15 @@
 - 本地 dev server 为 `http://127.0.0.1:4173/`。`agent-browser` 未在 PATH 中，使用 `npx.cmd --yes agent-browser` 0.37.1 完成相同流程。
 - Home 和 Products 均有有效正文且无 Vite/Next/Webpack error overlay；Products DOM 显示 10 类，其中 3 类为可进入链接。
 - Tiling、Waterproofing、Repairing 三个类别路由，以及 TA313、WP533、RM760 三个主力详情路由均加载正确标题、有效正文、0 张失败图片和 0 个错误遮罩；TA328/TG410E 由同一数据模板和 build output 覆盖。
-- 桌面视觉检查覆盖 Product 目录、Tiling 产品卡、TA313 详情和大兴机场专题；390 × 844 检查 Product 目录为单列，未观察到横向溢出。浏览器 `errors` 输出为空。
+- 桌面视觉检查覆盖 Product 目录、Tiling 产品卡、TA313 详情和大兴机场专题；390 × 844 检查 Product 目录、WP533 详情与大兴机场专题，Product 目录为单列，已检查页面无横向溢出。浏览器 `errors` 输出为空。
 - RM760/WP533 公开 PDF 副本与新 supplied source 的 SHA-256 一致；TA313 新 source 与既有副本一致。5 张大兴机场网页图核实为 2400 × 1350、1800 × 1200、1800 × 1200、1800 × 1164、1800 × 1200，而客户原图未修改。
 
 验证边界：未在真实手机上检查；未做完整无障碍、性能或 SEO 审计；旧站图片版权只做风险记录，不构成授权确认；大兴机场供应期/工程范围仍未知。本节记录的“本地通过”不等于已部署或客户确认。
 
-当前发布状态：等待本轮 Git 提交、GitHub Pages workflow 与公开 URL 复核；完成后在本节补充部署依据。
+部署与公开复核（2026-09-16）：
+
+- 功能发布提交 `fd068aaf34143d9e57cb0483eab75da115e51215` 已推送到 `origin/main`。
+- GitHub Actions `Deploy GitHub Pages` run `35016872566` 于 2026-09-16 03:59（Asia/Shanghai；GitHub 记录 2026-09-15 19:59 UTC）成功完成 build 与 deploy：`https://github.com/SCSANITY/optimix-concept-a/actions/runs/35016872566`。
+- 公开 Home、Products、WP533 Detail 和 Projects 经 `agent-browser` 真实加载，标题正确、失败图片为 0、浏览器 errors 为空；Products 为 10 类/3 个可用链接，Projects 为 31 张卡并存在 Daxing feature。
+- 公开 RM760 与 WP533 PDF 均返回 HTTP 200、`application/pdf`，字节数与本地发布副本一致。
+- 公开预览：`https://scsanity.github.io/optimix-concept-a/`。该结果证明 `fd068aa` 已部署，不等于客户已确认本轮设计、文字或素材权利。
