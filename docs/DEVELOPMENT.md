@@ -331,3 +331,10 @@
 - 当前仍未实现 WordPress、正式 permalink、多语言、真实 Admin、AI 服务、SEO、表单、分析或生产认证。Admin 原型只用于对齐未来编辑体验；AI 助手仍是前台演示壳。
 - 本轮未做真实移动设备、性能预算、完整 WCAG 或正式 SEO 审计。官方站点参考图仍须在生产前由客户提供原图或书面确认复用权限。
 - 写入本节时 Git 基线仍为 `main@0d97c5c`，工作树尚未提交、推送或部署；公开 URL 仍代表旧版本。最终提交、GitHub Actions run 与公开复核依据应在完成发布后补写，不得提前声明上线。
+
+发布补记（2026-09-28）：
+
+- 功能提交 `b94aa3925a79c1c3364cdc7827702137983a45e4`（`Expand systems news and admin prototype`）已推送至 `origin/main`。
+- GitHub Actions `Deploy GitHub Pages` run `36340054665` 完成 build 与 deploy，结论为 success：`https://github.com/SCSANITY/optimix-concept-a/actions/runs/36340054665`。
+- 在 Actions 成功后，使用全新 Chrome CDP 页面会话检查公开 URL 的 Home、Systems Overview、Swimming Pool Detail、News Archive、Green Factory News Detail、Company、Certifications 与 Admin Prototype。八个入口均有正确标题与正文；Systems 为 9 张卡、News 为 3 张卡、Admin 原型标识存在；失败图片、运行时 exception、console error、HTTP 4xx/5xx 和横向溢出均为 0。
+- 公开预览：`https://scsanity.github.io/optimix-concept-a/`。这证明上述提交已经部署，不等于客户已确认本轮视觉、文字、技术资料或素材权利。
