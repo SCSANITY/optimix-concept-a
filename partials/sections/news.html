@@ -1,38 +1,24 @@
 <!--
   CMS MAPPING
-  - Eyebrow, title, description, and archive CTA → ACF Options Page: Homepage News
-  - News list → CPT: news (fields: title, publication_date, permalink)
-  - Current external URLs → Temporary links to verified articles on the existing Optimix site
-  - Row format, numbering, and responsive behavior → Fixed theme template behavior
+  - Archive introduction -> WordPress Page fields
+  - Article cards -> CPT: news (title, date, category, excerpt, featured image)
+  - Archive composition and filters -> Fixed theme template behavior
 -->
-<section class="scroll-mt-24 bg-mist py-20 sm:py-24 lg:py-32" id="news" data-news>
+<section class="news-archive bg-paper py-20 sm:py-24 lg:py-28" data-news>
   <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
-    <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16" data-reveal>
+    <div class="grid gap-8 border-b border-ink/15 pb-10 lg:grid-cols-12 lg:items-end lg:pb-14" data-reveal>
       <div class="lg:col-span-7">
-        <p class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-blue">
-          <span class="font-heading text-brand-red">07</span>
-          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
-          <span data-news-eyebrow></span>
-        </p>
-        <h2
-          class="max-w-[720px] font-heading text-[2.125rem] font-bold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl lg:text-[3.25rem]"
-          data-news-title
-        ></h2>
+        <p class="section-kicker"><span>01</span><span data-news-eyebrow></span></p>
+        <h2 class="mt-5 max-w-[760px] font-heading text-4xl font-bold leading-[1.06] tracking-[-0.035em] text-ink sm:text-5xl lg:text-6xl" data-news-title></h2>
       </div>
-      <div class="lg:col-span-5">
-        <p class="max-w-[520px] text-lg leading-[1.7] text-ink/70" data-news-description></p>
-        <a
-          class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue underline-offset-8 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-news-archive-link
-        >
-          <span data-news-archive-label></span>
-          <span aria-hidden="true">↗</span>
-        </a>
-      </div>
+      <p class="max-w-[520px] text-lg leading-[1.7] text-ink/66 lg:col-span-5" data-news-description></p>
     </div>
 
-    <div class="mt-14 border-t border-ink/20 lg:mt-20" data-news-list data-reveal></div>
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-5" data-reveal>
+      <div class="flex flex-wrap gap-2" data-news-filters aria-label="Filter news by category"></div>
+      <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/42"><span data-news-count></span> published stories</p>
+    </div>
+
+    <div class="mt-10 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3" data-news-list data-reveal></div>
   </div>
 </section>

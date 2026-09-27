@@ -12,7 +12,7 @@ export function initReveal() {
       observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.14,
+    threshold: 0.05,
     rootMargin: '0px 0px -8% 0px',
   });
 

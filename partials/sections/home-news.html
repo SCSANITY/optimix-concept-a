@@ -1,0 +1,41 @@
+<!--
+  CMS MAPPING
+  - Section copy and archive CTA → ACF Options Page: Homepage News
+  - Featured and supporting stories → CPT: news
+  - Current story links → Temporary verified links to the existing Optimix website
+  - Editorial layout and image treatment → Fixed theme template behavior
+-->
+<section class="home-news relative scroll-mt-20 overflow-hidden" id="latest-news" data-home-news>
+  <div class="home-news__signal pointer-events-none absolute inset-0" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-site px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
+    <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-12" data-reveal>
+      <div class="lg:col-span-8">
+        <p class="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.17em] text-brand-blue">
+          <span class="font-heading text-brand-red">03</span>
+          <span class="h-px w-8 bg-ink/20" aria-hidden="true"></span>
+          <span data-home-news-eyebrow></span>
+        </p>
+        <h2 class="home-news__title max-w-[800px] font-heading font-bold uppercase text-ink" data-home-news-title></h2>
+      </div>
+
+      <div class="lg:col-span-4 lg:pb-1">
+        <p class="max-w-[500px] text-base leading-[1.7] text-ink/64" data-home-news-description></p>
+        <a
+          class="home-news__archive mt-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.11em] text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4"
+        data-home-news-archive
+        >
+          <span data-home-news-archive-label></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="home-news__grid mt-10 sm:mt-12" data-home-news-list data-reveal></div>
+
+    <div class="mt-5 flex items-center justify-between gap-4 border-t border-ink/15 pt-4 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink/45">
+      <span>Latest verified updates</span>
+      <span>Official source links ↗</span>
+    </div>
+  </div>
+</section>

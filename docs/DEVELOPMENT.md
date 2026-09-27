@@ -253,3 +253,81 @@
 - 公开 Home、Products、WP533 Detail 和 Projects 经 `agent-browser` 真实加载，标题正确、失败图片为 0、浏览器 errors 为空；Products 为 10 类/3 个可用链接，Projects 为 31 张卡并存在 Daxing feature。
 - 公开 RM760 与 WP533 PDF 均返回 HTTP 200、`application/pdf`，字节数与本地发布副本一致。
 - 公开预览：`https://scsanity.github.io/optimix-concept-a/`。该结果证明 `fd068aa` 已部署，不等于客户已确认本轮设计、文字或素材权利。
+
+## 15. 2026-09-27 News、Systems 与 Admin 原型长任务（进行中）
+
+用户确认 `shared/suggestion.docx` 的需求解释与整合方案，并授权开发、验证、文档、Git 与最终部署。项目级范围、阶段和 Compact 恢复入口以 [`docs/tasks/2026-09-27-public-expansion-admin-prototype.md`](../../docs/tasks/2026-09-27-public-expansion-admin-prototype.md) 为准；本节只记录工程事实和实际断点。
+
+已确认的工程方向：
+
+- 首页固定为 Hero → Core Capabilities（Products / Systems / Credentials）→ Featured Project → Latest News；Projects 与 News 不重复进入 Core Capabilities。
+- Header 新增 Systems 与 News；Logo 只调整容器/留白，继续保持固定尺寸且无页面状态动画。
+- 新增 `systems.html`、`system-detail.html`、`news.html`、`news-detail.html` 四个公开入口，以及不进入公开导航的 `admin-prototype.html`。
+- Systems 一次覆盖官方旧站 9 个场景；News 使用 Archive + 共用 Detail；Company 与 Certifications 增加工厂、实验室和质量能力叙事。
+- Admin 只做静态可点击原型，状态驻留内存且刷新复原；不实现真实认证、存储、上传、权限或发布。
+
+实施检查点：
+
+1. Header/Logo 与首页结构。
+2. News Archive/Detail。
+3. Systems Overview/Detail 与 9 个场景。
+4. Company 与 Quality & Credentials。
+5. Admin Prototype。
+6. 全面回归、文档、GitHub Pages。
+
+起始状态（2026-09-27）：`main@0d97c5c` 与 `origin/main` 一致，工作树干净；公开站仍是第 14 节已核实版本。发生中断时先读项目级任务的“当前断点”，再检查 `git status` 和本节后续更新，不从计划文字推断已实现状态。
+
+### Checkpoint 1：全局导航与首页结构（本地完成，待用户评审）
+
+实现结果：
+
+- `data/content.json` 的 Header 新增 Systems 与 News。因为对应列表页属于后续 Checkpoint，当前两个入口暂时分别定位首页 `#capabilities` 与 `#latest-news`，保证本地评审无 404；正式 Archive 完成时必须改为本地页面。桌面导航从 1280 px 起显示，低于该宽度统一使用移动菜单，解决 7 个栏目、语言和 Contact CTA 在平板宽度拥挤的问题。
+- Logo 继续使用未经改绘的 `optimix-logo-official.png`，仅把容器改为带红蓝静态基线、细边框和固定斜切的白色技术型 dock。Logo/容器没有滚动、页面切换、缩放或位移动画；Contact CTA 也取消位移 hover，Header 保持全页一致的深色玻璃外观。
+- `homeGatewaysSection` 改为 Core Capabilities，且只展示 Products / Systems / Credentials。Products 和 Credentials 保留有效本地入口；Systems 使用官网 Wet Area 系统图作为已记录来源的预览，完整目录完成前用不可点击 `article` 明示 `Systems directory in development`，不创建伪详情或空链接。
+- Featured Project 继续独立存在，最小高度由 72svh 调整为 64svh，避免它与新增 News 一起把首页拉成长篇堆叠。
+- 新增 `partials/sections/home-news.html` 与 `assets/js/sections/home-news.js`：一条主新闻加两条次新闻的 editorial 布局，数据继续来自 `data/content.json`。当前三条为 2026-09-10 珠海 Green Factory、2026-09-07 行业对话、2026-08-25 清远酒店项目；在本地 News Detail 完成前，文章和 archive CTA 明示跳转 Optimix 官网。
+- 新增 3 张 `public/media/news/` 新闻图和 1 张 `public/media/systems/` 系统图。浏览器初查发现官网 archive 宣传拼图自带标题、与网页标题重复，随后改用各新闻详情内无嵌字的厂房、会面和酒店照片。来源 URL、转换和生产授权要求已写入 `docs/ASSET_PROVENANCE.md`。
+- `index.html` 当前顺序为 Hero → Core Capabilities → Featured Project → Latest News → Footer。未新增 Systems/News 独立入口，没有提前修改 Vite build input，也没有改 Product、Project、Certification、Company 现有页面结构。
+
+本轮验证（2026-09-27）：
+
+- `npm.cmd run build` 成功；Vite 8.2.1 构建既有 7 个 HTML 入口，输出 CSS `main-Cjrc6RfK.css` 与 JS `main-C-v1WIG2.js`。
+- 运行中的 Vite dev server 为 `http://127.0.0.1:5173/`。Home、Products、Product Category、Product Detail、Projects、Certifications、Company 代表路由均返回 HTTP 200。
+- 标准 `agent-browser` CLI 未在 PATH 中；改用本机 Chrome 153 的 DevTools Protocol 做真实 DOM/截图回退。1440 × 1000 与 390 × 844 下已实看 Core Capabilities 和 Latest News；最终新闻照片不含嵌入式标题重复，0 张失败图片且页面无横向溢出。
+- 新浏览器会话检查：首页有 7 个桌面导航项和 3 条 News，正文非空，Vite error overlay 为 0，控制台 error、运行时 exception 和 HTTP 4xx/5xx 均为 0。1279 px 下桌面导航隐藏、移动菜单可打开并渲染 7 项；1280 px 下桌面导航显示，移动按钮隐藏且已打开菜单自动复原。
+- `git diff --check` 无空白错误，仅输出 Windows 工作区的 LF/CRLF 提示。本轮未做真实移动设备、性能、SEO 或完整无障碍审计。
+
+状态与下一断点：
+
+- 当前仍为 `main@0d97c5c`，以上代码、内容、媒体和文档都在未提交工作树；没有 commit、push、GitHub Actions 或部署。公开预览继续代表第 14 节版本，本节不能写成已上线或客户已确认。
+- Checkpoint 1 已完成本地实现与验证，等待用户视觉评审。获得方向确认后进入 Checkpoint 2：建立 `news.html`、共用 `news-detail.html`、本地 permalink 和可映射 WordPress 的 News 内容模型，再把 Header/首页 CTA 从临时入口切换到本地路由。
+
+## 16. 2026-09-28 前台扩展、企业可信度与 Admin 原型收束
+
+用户要求把视觉验收合并到本轮最后统一进行，因此 Checkpoint 2–5 连续实现，并在全部功能完成后执行一次整体构建、浏览器与交互回归。第 15 节保留为 Checkpoint 1 的历史断点；本节取代其中“等待分段视觉评审”的下一步描述。
+
+已实现：
+
+- Vite build inputs 由 7 个扩展为 12 个：原有 7 个公开入口，加上 `systems.html`、`system-detail.html`、`news.html`、`news-detail.html`，以及不进入公开导航的 `admin-prototype.html`。公开信息架构仍按 11 个页面模板计算，Admin 是独立视觉原型。
+- Header 的 Systems / News 和首页 Core Capabilities / Latest News 已切换到本地页面，不再使用临时首页锚点或旧站正文外链；Footer 同步加入 Systems / News。所有入口继续使用同一个固定尺寸、无状态动画的深色玻璃 Header。
+- News 使用 `content.news` 作为首页、Archive 和 Detail 的共同数据源。Archive 有类别筛选；三个本地 Detail 共用 query-string 模板并包含正文、摘要、重点、相关内容和可追溯的官网 source URL。官网链接仅作为来源，不再代替 Demo 正文入口。
+- Systems 覆盖当前 Optimix 官网九个应用场景。Overview 以九张官方参考图构成目录；Detail 共用模板，显示 system drawing、assembly/layer 顺序、可映射到现有五个产品详情的数据关系、前后系统导航及典型参考免责声明。技术顺序来自官网对应 System 页面，没有生成或美化改写成新的工程事实。
+- Company 在原有事实摘要下增加三个企业叙事章节：制造规模、智能生产、质量与可持续。Certifications 在 11 份完整档案之前增加 Control / Verify / Certify 的质量能力引导，避免把完整证书档案重复成另一组卡片。
+- `admin-prototype.html` 提供 Overview、Content、Media、Site settings、Team 五个可点击区域，以及内容筛选、搜索、编辑抽屉、媒体选择、预览 Dialog 和模拟保存反馈。页面始终显示 Prototype mode；无登录、数据库、真实上传、权限、发布或本地持久化，刷新后恢复默认状态。
+- 新增 favicon link，避免浏览器默认请求 `/favicon.ico` 产生无关 404。Reveal threshold 从 0.14 调整为 0.05，修复移动端高度很大的 Systems 网格进入视口后仍长时间保持透明的问题。
+- Company 新增两张来自 Optimix Green Factory 新闻页的官方站点参考照片，并以 2,400 px 宽、quality-90 JPEG 作为本地运行副本。九张 Systems 图、三张 News 图和两张 Company 图的来源、转换及生产授权边界已写入 `ASSET_PROVENANCE.md`。
+
+本轮本地验证（2026-09-28）：
+
+- `npm.cmd run build` 成功；Vite 8.2.1 构建 12 个 HTML 入口。`data/content.json` 重新解析成功。
+- 标准 `agent-browser` CLI 仍不在 PATH；按浏览器验收 skill 的回退方案使用本机 Chrome 153 DevTools Protocol。桌面检查覆盖 22 个代表 URL：全部 12 个入口、9 个 System query 变体和 3 个 News query 变体中的完整页面集合；另检查 Home、Systems、Admin 的 390 × 844 移动视口。
+- 所有已检 URL 均有有效标题与正文，Vite error overlay、运行时 exception、失败图片、非取消网络失败、控制台 error 和横向溢出均为 0。桌面检查宽度为 1,440 px；移动检查的 `scrollWidth` 与 `clientWidth` 均为 390 px。
+- 视觉截图检查覆盖 Home、Systems Overview、Swimming Pool Detail、News Archive、Green Factory News Detail、Company 概览/制造章节、Quality & Credentials 和 Admin Overview；另检查 Systems、News、Admin 移动视图。最终修正了移动 Systems reveal 空白和 Admin 移动导航只显示编号的问题。
+- 交互回归确认：Admin 五区路由可切换，Content 列表渲染 5 个已记录产品并可打开/关闭模拟编辑器，模拟 Update 显示“不保存”反馈，Preview Dialog 可开关，Media 可选择；News Manufacturing 筛选后只显示 1 条；Systems 显示 9 张本地详情链接；移动菜单展开后有 7 项；客服 Demo 浮窗可打开。运行时问题数组为空。
+
+边界与下一步：
+
+- 上述状态是“本地已实现且已验证”，不是客户确认。正式站仍需客户核对企业事实、新闻文字、系统层次、证书元数据、照片授权及最终英文措辞。
+- 当前仍未实现 WordPress、正式 permalink、多语言、真实 Admin、AI 服务、SEO、表单、分析或生产认证。Admin 原型只用于对齐未来编辑体验；AI 助手仍是前台演示壳。
+- 本轮未做真实移动设备、性能预算、完整 WCAG 或正式 SEO 审计。官方站点参考图仍须在生产前由客户提供原图或书面确认复用权限。
+- 写入本节时 Git 基线仍为 `main@0d97c5c`，工作树尚未提交、推送或部署；公开 URL 仍代表旧版本。最终提交、GitHub Actions run 与公开复核依据应在完成发布后补写，不得提前声明上线。

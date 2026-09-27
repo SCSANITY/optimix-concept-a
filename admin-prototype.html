@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/media/optimix-logo-official.png" type="image/png">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Non-persistent Optimix content administration prototype.">
+    <title>Admin Prototype — Optimix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="admin-prototype font-body antialiased">
+    <div class="admin-shell">
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-brand">
+          <img src="./assets/media/optimix-logo-official.png" alt="Optimix" width="900" height="600">
+          <div><strong>Control Room</strong><span>Content prototype</span></div>
+        </div>
+        <nav class="admin-navigation" aria-label="Administration prototype">
+          <button type="button" data-admin-route="dashboard"><span>01</span>Overview</button>
+          <button type="button" data-admin-route="content"><span>02</span>Content</button>
+          <button type="button" data-admin-route="assets"><span>03</span>Media</button>
+          <button type="button" data-admin-route="site"><span>04</span>Site settings</button>
+          <button type="button" data-admin-route="team"><span>05</span>Team</button>
+        </nav>
+        <div class="admin-sidebar__footer"><span class="admin-status-dot"></span><span>Prototype environment</span></div>
+      </aside>
+
+      <main class="admin-main">
+        <div class="admin-prototype-banner"><strong>Prototype mode</strong><span>Changes are simulated and reset when this page refreshes.</span></div>
+        <header class="admin-topbar">
+          <div><p data-admin-eyebrow>Workspace / Overview</p><h1 data-admin-title>Good morning, Optimix.</h1></div>
+          <div class="admin-topbar__actions">
+            <a href="./index.html" target="_blank" rel="noopener noreferrer">View website ↗</a>
+            <button type="button" class="admin-button admin-button--primary" data-admin-preview>Preview changes</button>
+          </div>
+        </header>
+
+        <div class="admin-workspace">
+          <section class="admin-panel" data-admin-panel="dashboard">
+            <div class="admin-metric-grid" data-admin-metrics></div>
+            <div class="admin-dashboard-grid">
+              <section class="admin-card admin-card--activity">
+                <div class="admin-card__header"><div><span>Content activity</span><h2>Recently updated</h2></div><button type="button" data-admin-route="content">View all →</button></div>
+                <div class="admin-activity-list" data-admin-activity></div>
+              </section>
+              <section class="admin-card admin-card--health">
+                <div class="admin-card__header"><div><span>Publishing readiness</span><h2>Site health</h2></div><strong>82%</strong></div>
+                <div class="admin-health-ring" aria-label="82 percent ready"><span>82<small>%</small></span></div>
+                <ul><li><span>Public page structure</span><strong>Ready</strong></li><li><span>Approved imagery</span><strong class="is-warning">Review</strong></li><li><span>WordPress integration</span><strong class="is-pending">Planned</strong></li></ul>
+              </section>
+            </div>
+          </section>
+
+          <section class="admin-panel" data-admin-panel="content" hidden>
+            <div class="admin-section-heading"><div><span>Editorial workspace</span><h2>Content library</h2><p>Review public content types and open a simulated editor.</p></div><button type="button" class="admin-button admin-button--primary" data-admin-create>+ New entry</button></div>
+            <div class="admin-content-toolbar"><div class="admin-content-tabs" data-admin-content-tabs></div><label><span>Search</span><input type="search" placeholder="Find content…" data-admin-search></label></div>
+            <div class="admin-content-table" data-admin-content-list></div>
+          </section>
+
+          <section class="admin-panel" data-admin-panel="assets" hidden>
+            <div class="admin-section-heading"><div><span>Asset library</span><h2>Media</h2><p>Representative public assets currently used by the concept.</p></div><button type="button" class="admin-button" data-admin-upload>Upload media</button></div>
+            <div class="admin-media-grid" data-admin-media></div>
+          </section>
+
+          <section class="admin-panel" data-admin-panel="site" hidden>
+            <div class="admin-section-heading"><div><span>Global configuration</span><h2>Site settings</h2><p>Preview the fields that would map to WordPress options and menus.</p></div></div>
+            <form class="admin-settings-form" data-admin-form>
+              <section class="admin-card"><div class="admin-card__header"><div><span>Identity</span><h2>Website details</h2></div></div><div class="admin-form-grid"><label>Site title<input value="Optimix"></label><label>Public language<select><option>English</option><option>Traditional Chinese</option></select></label><label class="is-wide">Contact email<input value="info@optimix.com.hk" type="email"></label></div></section>
+              <section class="admin-card"><div class="admin-card__header"><div><span>Navigation</span><h2>Primary menu</h2></div></div><div class="admin-menu-preview" data-admin-menu-preview></div></section>
+              <button type="submit" class="admin-button admin-button--primary">Save settings</button>
+            </form>
+          </section>
+
+          <section class="admin-panel" data-admin-panel="team" hidden>
+            <div class="admin-section-heading"><div><span>Access model</span><h2>Team & roles</h2><p>A visual proposal only; authentication and permissions are not connected.</p></div><button type="button" class="admin-button" data-admin-invite>Invite member</button></div>
+            <div class="admin-team-grid"><article class="admin-person"><span>OC</span><div><strong>Optimix Content Team</strong><p>Administrator · Full content access</p></div><em>Active</em></article><article class="admin-person"><span>TA</span><div><strong>Technical Approver</strong><p>Reviewer · Products and systems</p></div><em>Proposed</em></article><article class="admin-person"><span>EA</span><div><strong>Editorial Author</strong><p>Author · News and projects</p></div><em>Proposed</em></article></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <aside class="admin-editor" aria-hidden="true" data-admin-editor>
+      <div class="admin-editor__header"><div><span>Simulated editor</span><h2 data-admin-editor-title>Edit entry</h2></div><button type="button" aria-label="Close editor" data-admin-editor-close>×</button></div>
+      <form data-admin-editor-form><label>Title<input data-admin-editor-input></label><label>Summary<textarea rows="6">This is a demonstration field. Editing it will not change the public website.</textarea></label><label>Status<select><option>Published</option><option>Draft</option><option>Review</option></select></label><div class="admin-editor__actions"><button type="button" class="admin-button" data-admin-editor-close>Cancel</button><button type="submit" class="admin-button admin-button--primary">Update</button></div></form>
+    </aside>
+    <div class="admin-scrim" hidden data-admin-scrim></div>
+
+    <dialog class="admin-preview-dialog" data-admin-preview-dialog>
+      <button type="button" class="admin-preview-dialog__close" aria-label="Close preview" data-admin-preview-close>×</button>
+      <span>Preview mode</span><h2>Public website preview</h2><p>This prototype would open the draft-aware frontend in the final CMS. For now it links to the current static concept.</p><a href="./index.html" target="_blank" rel="noopener noreferrer">Open concept website ↗</a>
+    </dialog>
+    <div class="admin-toast" role="status" aria-live="polite" data-admin-toast></div>
+    <script type="module" src="./assets/js/admin-prototype.js"></script>
+  </body>
+</html>

@@ -4,13 +4,16 @@ Multi-page front-end design prototype for Optimix, built with semantic HTML, Tai
 
 ## Current prototype surface
 
-- `index.html` — concise homepage with corporate-film hero, portfolio gateways, and featured project proof
+- `index.html` — concise homepage with corporate-film hero, Products / Systems / Credentials gateways, featured project proof, and latest news
 - `products.html` — compact media-first directory of ten top-level product categories with locally stored reference imagery from the Optimix website
 - `product-category.html?category=...` — Tiling, Waterproofing, and Repairing range views with product-type filtering
 - `product-detail.html?product=...` — data-driven technical detail views for TA313, TA328, TG410E, WP533, and RM760
 - `projects.html` — filterable register of 31 supplied projects, a Beijing Daxing Airport feature story, and the source project casebook
-- `certifications.html` — 11 supplied credentials grouped into five families with source-document links
-- `company.html` — compact company introduction and current manufacturer facts from the supplied company brochure
+- `systems.html` and `system-detail.html?system=...` — nine application systems with official reference drawings, layer sequences, documented product links, and a shared detail template
+- `news.html` and `news-detail.html?article=...` — filterable news archive and three shared-template article views based on current Optimix source material
+- `certifications.html` — quality-capability narrative plus 11 supplied credentials grouped into five families with source-document links
+- `company.html` — company profile plus manufacturing, smart-production, quality, and sustainability chapters
+- `admin-prototype.html` — separate clickable administration visual prototype; all changes are simulated in memory and reset on refresh
 - Shared responsive navigation, contact footer, scroll/reveal motion, and a local demonstration support assistant
 
 This remains a review prototype: it has no CMS, backend, live support service, production localization, or final SEO setup. All entry pages intentionally use `noindex, nofollow`.
@@ -55,4 +58,4 @@ Vite expands the `@include` comments at build time. There is no client-side temp
 - The official Optimix logo and supplied client documents are retained unchanged.
 - The Hero uses an Optimix-supplied corporate film: an unchanged full-film copy plus a derived muted homepage loop and poster. See `docs/ASSET_PROVENANCE.md`.
 - Product media combines client-supplied data sheets with locally copied imagery from the official Optimix website; project and certification presentation media comes from client-supplied material. Source, rights, and transformation limits are recorded in `docs/ASSET_PROVENANCE.md`.
-- Approved system technical drawings remain pending and the existing system data/partials are not part of the active page entries.
+- System drawings and selected News / Company images are local prototype copies from the current official Optimix website. They are active in the Demo, but approved production originals and written reuse confirmation remain pending.

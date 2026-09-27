@@ -1,0 +1,50 @@
+<!--
+  CMS MAPPING
+  - Article content -> CPT: news single template
+  - Related stories -> Latest news query excluding current post
+  - Source link -> Optional external_source_url field
+-->
+<article data-news-detail>
+  <header class="news-detail-hero relative isolate overflow-hidden bg-deep-blue pt-32 text-white sm:pt-36 lg:pt-40">
+    <div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto max-w-site px-5 pb-12 sm:px-8 sm:pb-16 lg:px-10 lg:pb-20">
+      <a class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/65 hover:text-white" href="./news.html">← All news</a>
+      <div class="mt-9 grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-8">
+          <div class="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white/62">
+            <span class="bg-brand-red px-3 py-2 text-white" data-news-detail-category></span>
+            <time data-news-detail-date></time>
+          </div>
+          <h1 class="mt-6 max-w-[940px] font-heading text-[2.5rem] font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-5xl lg:text-[4.2rem]" data-news-detail-title></h1>
+        </div>
+        <p class="max-w-[520px] border-l-2 border-brand-blue pl-5 text-base leading-[1.72] text-white/72 lg:col-span-4" data-news-detail-lede></p>
+      </div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[1500px] px-0 sm:px-8 lg:px-10">
+      <img class="h-[48svh] min-h-[380px] w-full object-cover sm:h-[58svh]" data-news-detail-image alt="">
+    </div>
+  </header>
+
+  <div class="bg-paper py-20 sm:py-24 lg:py-28">
+    <div class="mx-auto grid max-w-site gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:px-10">
+      <div class="news-detail-copy lg:col-span-7 lg:col-start-2" data-news-detail-body data-reveal></div>
+      <aside class="lg:col-span-3 lg:col-start-10" data-reveal>
+        <div class="sticky top-28 border-t-2 border-brand-blue pt-6">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-ink/45">At a glance</p>
+          <ul class="mt-5 divide-y divide-ink/12 border-b border-ink/12" data-news-detail-highlights></ul>
+          <a class="mt-7 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-brand-blue hover:underline" target="_blank" rel="noopener noreferrer" data-news-detail-source>View original source <span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="bg-mist py-20 sm:py-24" aria-labelledby="related-news-title">
+    <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+      <div class="flex items-end justify-between gap-6" data-reveal>
+        <div><p class="section-kicker"><span>02</span><span>Continue reading</span></p><h2 class="mt-4 font-heading text-3xl font-bold tracking-[-0.03em] sm:text-4xl" id="related-news-title">Related news</h2></div>
+        <a class="hidden text-xs font-semibold uppercase tracking-[0.12em] text-brand-blue sm:inline-flex" href="./news.html">View archive →</a>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2" data-news-related data-reveal></div>
+    </div>
+  </section>
+</article>

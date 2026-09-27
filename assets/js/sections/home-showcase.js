@@ -1,11 +1,14 @@
 import content from '../../../data/content.json';
 
 function createGateway(item) {
-  const link = document.createElement('a');
-  link.className = `gateway-panel gateway-panel--${item.slug} group`;
-  link.href = item.href;
-  link.dataset.gateway = item.slug;
-  link.setAttribute('aria-label', `${item.linkLabel}: ${item.title}`);
+  const panel = document.createElement(item.href ? 'a' : 'article');
+  panel.className = `gateway-panel gateway-panel--${item.slug} group${item.href ? '' : ' is-pending'}`;
+  panel.dataset.gateway = item.slug;
+
+  if (item.href) {
+    panel.href = item.href;
+    panel.setAttribute('aria-label', `${item.linkLabel}: ${item.title}`);
+  }
 
   const image = document.createElement('img');
   image.className = 'gateway-panel__image';
@@ -39,12 +42,12 @@ function createGateway(item) {
 
   const arrow = document.createElement('span');
   arrow.setAttribute('aria-hidden', 'true');
-  arrow.textContent = '↗';
+  arrow.textContent = item.href ? '↗' : '—';
   cta.append(arrow);
 
   contentPanel.append(title, description, cta);
-  link.append(image, grade, index, contentPanel);
-  return link;
+  panel.append(image, grade, index, contentPanel);
+  return panel;
 }
 
 function initGateways() {

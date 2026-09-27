@@ -9,41 +9,67 @@ function formatDate(value) {
   }).format(new Date(`${value}T00:00:00Z`));
 }
 
+function createArticleCard(article, index) {
+  const link = document.createElement('a');
+  link.href = article.url;
+  link.className = 'news-archive-card group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-4';
+  link.dataset.category = article.category;
+  link.innerHTML = `
+    <div class="news-archive-card__media relative aspect-[4/3] overflow-hidden bg-mist">
+      <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" src="${article.imageUrl}" alt="${article.imageAlt}" loading="${index === 0 ? 'eager' : 'lazy'}">
+      <span class="absolute left-4 top-4 bg-deep-blue/86 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-md">${article.category}</span>
+      <span class="news-archive-card__index absolute bottom-3 right-4 font-heading text-5xl font-bold text-white/65" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>
+    </div>
+    <div class="border-x border-b border-ink/14 px-5 pb-6 pt-5 sm:px-6">
+      <time class="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/45" datetime="${article.date}">${formatDate(article.date)}</time>
+      <h3 class="mt-4 font-heading text-xl font-bold leading-[1.28] tracking-[-0.02em] text-ink transition-colors group-hover:text-brand-blue sm:text-2xl">${article.title}</h3>
+      <p class="mt-4 text-sm leading-[1.7] text-ink/62">${article.excerpt}</p>
+      <span class="mt-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-brand-blue">Read story <span aria-hidden="true">→</span></span>
+    </div>`;
+  return link;
+}
+
 export function initNews() {
   const root = document.querySelector('[data-news]');
   if (!root) return;
-
   const section = content.newsSection;
+  const list = root.querySelector('[data-news-list]');
+  const filterRoot = root.querySelector('[data-news-filters]');
+  const count = root.querySelector('[data-news-count]');
+  const categories = ['All', ...new Set(content.news.map((article) => article.category))];
   root.querySelector('[data-news-eyebrow]').textContent = section.eyebrow;
   root.querySelector('[data-news-title]').textContent = section.title;
   root.querySelector('[data-news-description]').textContent = section.description;
 
-  const archiveLink = root.querySelector('[data-news-archive-link]');
-  archiveLink.href = section.ctaUrl;
-  root.querySelector('[data-news-archive-label]').textContent = section.ctaLabel;
-
-  const list = root.querySelector('[data-news-list]');
-  content.news.forEach((article) => {
-    const link = document.createElement('a');
-    link.href = article.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.className = 'group grid gap-4 border-b border-ink/20 py-7 transition-colors duration-300 hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-blue sm:py-8 lg:grid-cols-12 lg:items-center lg:gap-6';
-
-    const date = document.createElement('time');
-    date.dateTime = article.date;
-    date.className = 'text-xs font-semibold uppercase tracking-[0.12em] text-ink/45 lg:col-span-2';
-    date.textContent = formatDate(article.date);
-
-    const title = document.createElement('h3');
-    title.className = 'max-w-[780px] font-heading text-xl font-semibold leading-[1.35] tracking-[-0.015em] text-ink transition-colors group-hover:text-brand-blue sm:text-2xl lg:col-span-8';
-    title.textContent = article.title;
-
-    const meta = document.createElement('span');
-    meta.className = 'flex items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink/40 lg:col-span-2';
-    meta.innerHTML = '<span>News &amp; Events</span><span class="text-lg text-brand-blue transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">↗</span>';
-
-    link.append(date, title, meta);
-    list.append(link);
+  const cards = content.news.map((article, index) => {
+    const card = createArticleCard(article, index);
+    list.append(card);
+    return card;
   });
+
+  const setFilter = (category) => {
+    let visibleCount = 0;
+    cards.forEach((card) => {
+      const visible = category === 'All' || card.dataset.category === category;
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    count.textContent = visibleCount;
+    filterRoot.querySelectorAll('button').forEach((button) => {
+      const active = button.dataset.category === category;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  };
+
+  categories.forEach((category) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.dataset.category = category;
+    button.className = 'news-filter';
+    button.textContent = category;
+    button.addEventListener('click', () => setFilter(category));
+    filterRoot.append(button);
+  });
+  setFilter('All');
 }

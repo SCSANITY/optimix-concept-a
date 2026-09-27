@@ -8,7 +8,9 @@
     "navigation": [
       { "page": "home", "label": "Home", "href": "./index.html" },
       { "page": "products", "label": "Products", "href": "./products.html" },
+      { "page": "systems", "label": "Systems", "href": "./systems.html" },
       { "page": "projects", "label": "Projects", "href": "./projects.html" },
+      { "page": "news", "label": "News", "href": "./news.html" },
       { "page": "certifications", "label": "Certifications", "href": "./certifications.html" },
       { "page": "company", "label": "Company", "href": "./company.html" }
     ],
@@ -41,33 +43,33 @@
     "filmDuration": "03:43"
   },
   "homeGatewaysSection": {
-    "eyebrow": "Core Portfolio",
+    "eyebrow": "Core Capabilities",
     "titleLines": [
-      "From material",
-      "to proof."
+      "Engineered",
+      "as a system."
     ],
-    "description": "Three connected fields define Optimix: engineered products, documented projects and independently verified credentials."
+    "description": "Products, application systems and verified credentials form one connected technical platform."
   },
   "homeGateways": [
     {
-      "slug": "projects",
-      "index": "01",
-      "title": "Project Portfolio",
-      "description": "Thirty-one documented projects across Hong Kong and Mainland China.",
-      "href": "./projects.html",
-      "linkLabel": "Explore Projects",
-      "imageUrl": "./media/projects/01-hkia-third-runway.jpg",
-      "imageAlt": "Hong Kong International Airport Third Runway project"
-    },
-    {
       "slug": "products",
-      "index": "02",
+      "index": "01",
       "title": "Technical Products",
-      "description": "Material systems for tiling, waterproofing, repair and critical construction layers.",
+      "description": "Material ranges organised by performance, application and construction need.",
       "href": "./products.html",
       "linkLabel": "Explore Products",
       "imageUrl": "./media/products/optimix-ta328-application.jpeg",
       "imageAlt": "Optimix tile adhesive being applied on site"
+    },
+    {
+      "slug": "systems",
+      "index": "02",
+      "title": "Application Systems",
+      "description": "Coordinated build-ups for wet areas, roofs, façades and other critical conditions.",
+      "href": "./systems.html",
+      "linkLabel": "Explore Systems",
+      "imageUrl": "./media/systems/01-washroom-wet-area.png",
+      "imageAlt": "Optimix washroom and wet area system drawing"
     },
     {
       "slug": "certifications",
@@ -117,9 +119,25 @@
       "eyebrow": "Optimix Since 2000",
       "title": "Manufacturing confidence into every layer.",
       "description": "Research, manufacturing and technical dry mortar expertise developed for Hong Kong construction.",
-      "imageUrl": "./media/company/optimix-production-facility.jpg",
-      "imageAlt": "Optimix production and logistics facility",
+      "imageUrl": "./media/company/zhuhai-automated-production.jpg",
+      "imageAlt": "Aerial view of the Optimix Zhuhai production base",
       "proof": "Hong Kong · Greater Bay Area"
+    },
+    "systems": {
+      "eyebrow": "Application Systems",
+      "title": "See every layer working together.",
+      "description": "Nine application-led build-ups connect substrate preparation, waterproofing, bedding, adhesion and finishing.",
+      "imageUrl": "./media/systems/07-swimming-pool.png",
+      "imageAlt": "Optimix swimming pool system cutaway",
+      "proof": "9 documented systems"
+    },
+    "news": {
+      "eyebrow": "News & Insights",
+      "title": "Progress, recorded at the source.",
+      "description": "Manufacturing milestones, industry dialogue and project stories from Optimix.",
+      "imageUrl": "./media/news/zhuhai-green-factory-2026.jpg",
+      "imageAlt": "Optimix Zhuhai production base",
+      "proof": "Official company updates"
     }
   },
   "companyStats": [
@@ -141,20 +159,175 @@
     ],
     "proofStatSlug": "capacity"
   },
+  "companyStory": {
+    "eyebrow": "Manufacturing Platform",
+    "title": "From formulation to finished system.",
+    "description": "Optimix connects material research, automated manufacturing and documented quality controls across its Greater Bay Area operations.",
+    "sourceNote": "Operational figures and facility descriptions are based on supplied company materials and current Optimix news sources; final publication remains subject to client verification.",
+    "chapters": [
+      {
+        "index": "01",
+        "label": "Manufacturing scale",
+        "title": "Two facilities. One controlled material platform.",
+        "description": "Dongguan and Zhuhai production facilities support a reported combined annual capacity of 600,000 tonnes and a portfolio of more than 120 dry mortar formulations.",
+        "imageUrl": "./media/company/zhuhai-automated-production.jpg",
+        "imageAlt": "Aerial view of the Optimix Zhuhai production base",
+        "facts": ["Dongguan + Zhuhai", "600k tonnes annual capacity", "120+ formulations"]
+      },
+      {
+        "index": "02",
+        "label": "Smart production",
+        "title": "Precision is designed into the process.",
+        "description": "The Zhuhai smart plant combines automated production lines, computer-controlled batching, AGV movement and warehouse management to improve repeatability and operational visibility.",
+        "imageUrl": "./media/news/ray-wong-dialogue-2026.jpg",
+        "imageAlt": "Optimix smart manufacturing plant visit in Zhuhai",
+        "facts": ["Automated batching", "AGV logistics", "Warehouse management"]
+      },
+      {
+        "index": "03",
+        "label": "Quality + sustainability",
+        "title": "Measured performance, beyond the bag.",
+        "description": "A standardised on-site laboratory, documented management systems and a 600 kW rooftop photovoltaic installation connect product performance with responsible manufacturing.",
+        "imageUrl": "./media/company/zhuhai-green-environment.jpg",
+        "imageAlt": "Landscaped green environment at the Optimix Zhuhai production base",
+        "facts": ["Standardised laboratory", "ISO management systems", "600 kW rooftop solar"]
+      }
+    ]
+  },
   "systemsSection": {
-    "eyebrow": "System Solutions",
-    "title": "Performance is built as a system.",
-    "description": "Explore Optimix material systems for wall, rooftop and flooring applications.",
-    "drawingLabel": "Technical Section",
-    "drawingPlaceholder": "Approved system drawing required"
+    "eyebrow": "System Directory",
+    "title": "One specification. Every connected layer.",
+    "description": "Browse nine Optimix application systems documented on the existing company website. Each drawing is a typical reference and remains subject to project specifications.",
+    "drawingLabel": "Official System Reference",
+    "detailLabel": "Explore system",
+    "disclaimer": "Typical reference only. Product sequence and combination must follow the architect's and contractor's project specifications."
   },
   "systems": [
-    { "slug": "internal-external-wall-tiling", "name": "Internal / External Wall Tiling System", "description": null, "layers": [] },
-    { "slug": "external-wall-waterproofing-rendering-tiling", "name": "External Wall Waterproofing Rendering & Tiling System", "description": null, "layers": [] },
-    { "slug": "internal-wall-painting", "name": "Internal Wall Painting System", "description": null, "layers": [] },
-    { "slug": "rooftop-waterproofing-tiling", "name": "Rooftop Waterproofing & Tiling System", "description": null, "layers": [] },
-    { "slug": "self-leveling-overlayment", "name": "Self-Leveling Overlayment System", "description": null, "layers": [] }
+    {
+      "slug": "washroom-wet-area",
+      "index": "01",
+      "name": "Washroom & Wet Area",
+      "summary": "A coordinated wall-and-floor build-up for waterproofed tiled wet areas.",
+      "imageUrl": "./media/systems/01-washroom-wet-area.png",
+      "imageAlt": "Washroom and wet area system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/1/Washroom-%26-Wet-Area",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A · Concrete substrate", "C / D · OPTIMIX Procrete", "E · OPTIMIX BP138 wall render", "F · OPTIMIX WP533 waterproofing", "H · OPTIMIX TA313 tile adhesive", "I · OPTIMIX TG410E tile grout"] },
+        { "name": "Floor", "layers": ["A · Concrete substrate", "D · OPTIMIX Procrete", "J · OPTIMIX FS161 floor screed", "F · OPTIMIX WP533 waterproofing", "H / I · OPTIMIX TA313 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "roof-exposed-area",
+      "index": "02",
+      "name": "Roof & Exposed Area",
+      "summary": "A reinforced waterproofing and tiling sequence for exposed horizontal and vertical surfaces.",
+      "imageUrl": "./media/systems/02-roof-exposed-area.png",
+      "imageAlt": "Roof and exposed area system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/2/Roof-%26-Exposed-Area",
+      "assemblies": [
+        { "name": "Floor", "layers": ["A / B · Concrete and OPTIMIX WP515 treatment", "D / J · OPTIMIX Procrete and FS161", "F / G · OPTIMIX WP568 with mesh", "H / I · OPTIMIX TA313 and TG410E"] },
+        { "name": "Vertical feature", "layers": ["A / B · Concrete and OPTIMIX WP515 treatment", "C / D / E · OPTIMIX Procrete and BP138", "F / G · OPTIMIX WP568 with mesh", "H / I · OPTIMIX TA328 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "balcony",
+      "index": "03",
+      "name": "Balcony",
+      "summary": "A flexible waterproofed wall-and-floor assembly for exposed balcony conditions.",
+      "imageUrl": "./media/systems/03-balcony.jpg",
+      "imageAlt": "Balcony system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/3/Balcony",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A · Concrete substrate", "C / D / E · OPTIMIX Procrete and BP138", "F / G · OPTIMIX WP568 with mesh", "H / I · OPTIMIX TA328 and TG410E"] },
+        { "name": "Floor", "layers": ["A / D / J · Concrete, OPTIMIX Procrete and FS161", "F / G · OPTIMIX WP568 with mesh", "H / I · OPTIMIX TA328 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "basement-underground-facility",
+      "index": "04",
+      "name": "Basement & Underground Facility",
+      "summary": "A system that addresses negative water pressure before waterproofing and tiled finishing.",
+      "imageUrl": "./media/systems/04-basement-underground.png",
+      "imageAlt": "Basement and underground facility system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/4/Basement-%26-Underground-Facility",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A / B · Concrete and OPTIMIX WP515 treatment", "C / D / E · OPTIMIX Procrete and BP138", "F / G · OPTIMIX WP533 with mesh", "H / I · OPTIMIX TA328 and TG410E"] },
+        { "name": "Floor", "layers": ["A / B · Concrete and OPTIMIX WP515 treatment", "D / J · OPTIMIX Procrete and FS161", "G / H / F / I · Mesh, TA328, WP533 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "club-house-water-feature",
+      "index": "05",
+      "name": "Club House & Water Feature",
+      "summary": "Premium rendering, waterproofing and rapid-setting bedding for high-use amenity spaces.",
+      "imageUrl": "./media/systems/05-club-house-water-feature.png",
+      "imageAlt": "Club house and water feature system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/5/Club-House-%26-Water-Feature",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A / C / D · Concrete and OPTIMIX Procrete", "E / F / G · OPTIMIX BP168 and WP533 with mesh", "H / I · OPTIMIX TA328 and TG410E"] },
+        { "name": "Floor", "layers": ["A / F / D · Concrete, OPTIMIX WP533 and SF80", "K / H · OPTIMIX DB390 and DB391", "I · OPTIMIX TG410E tile grout"] }
+      ]
+    },
+    {
+      "slug": "kitchen-damp-area",
+      "index": "06",
+      "name": "Kitchen & Damp Area",
+      "summary": "A waterproof wall-and-floor build-up for kitchens, pantries and other damp areas.",
+      "imageUrl": "./media/systems/06-kitchen-damp-area.png",
+      "imageAlt": "Kitchen and damp area system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/6/Kitchen-%26-Damp-Area",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A / C / D · Concrete and OPTIMIX Procrete", "E / F · OPTIMIX BP138 and WP533", "H / I · OPTIMIX TA313 and TG410E"] },
+        { "name": "Floor", "layers": ["A / D / J · Concrete, OPTIMIX Procrete and FS161", "F / H / I · OPTIMIX WP533, TA313 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "swimming-pool",
+      "index": "07",
+      "name": "Swimming Pool",
+      "summary": "A reinforced waterproofing and flexible tile system for continuously wet pool environments.",
+      "imageUrl": "./media/systems/07-swimming-pool.png",
+      "imageAlt": "Swimming pool system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/7/Swimming-Pool",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A / C / D · Concrete and OPTIMIX Procrete", "E / F / G · OPTIMIX BP168 and WP533 with mesh", "H / I · OPTIMIX TA328 and TG410E"] },
+        { "name": "Floor", "layers": ["A / D / J · Concrete, OPTIMIX Procrete and FS161", "F / G / H / I · OPTIMIX WP533, mesh, TA328 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "planter-green-wall",
+      "index": "08",
+      "name": "Planter & Green Wall",
+      "summary": "A flexible waterproofed assembly for planted zones and vertical landscape features.",
+      "imageUrl": "./media/systems/08-planter-green-wall.png",
+      "imageAlt": "Planter and green wall system cutaway",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/8/Planter-%26-Green-wall",
+      "assemblies": [
+        { "name": "Wall", "layers": ["A / C / D · Concrete and OPTIMIX Procrete", "E / F / G · OPTIMIX BP138 and WP568 with mesh", "H / I · OPTIMIX TA328 and tile grout"] },
+        { "name": "Floor", "layers": ["A / D / J · Concrete, OPTIMIX Procrete and FS161", "F / G / H / I · OPTIMIX WP568, mesh, TA328 and TG410E"] }
+      ]
+    },
+    {
+      "slug": "mic-dfma",
+      "index": "09",
+      "name": "MiC & DfMA",
+      "summary": "Factory-ready material selections designed for precision, repeatability and reduced site work.",
+      "imageUrl": "./media/systems/09-mic-dfma.png",
+      "imageAlt": "MiC and DfMA material system drawing",
+      "sourceUrl": "https://www.optimix.com.hk/en/drawing/9/MiC-%26-DfMA",
+      "assemblies": [
+        { "name": "Representative MiC build-up", "layers": ["A · Concrete substrate", "D · OPTIMIX SF80 or PE bonding agent", "E · OPTIMIX BP138 or BP168 render", "F · OPTIMIX WP515, WP533 or WP568", "H / I · TA313, TA314, TA328, SA329, TA338 and TG410E", "J · SF828, SF878, FS151, FS161, FS191 or FS192"] }
+      ]
+    }
   ],
+  "systemDetailPage": {
+    "backLabel": "All Systems",
+    "drawingLabel": "Official application drawing",
+    "assemblyLabel": "Typical layer sequence",
+    "sourceLabel": "View original Optimix reference",
+    "relatedLabel": "Continue through the system library",
+    "disclaimer": "This material system and drawing are typical examples for reference only. Product sequence and combination can be modified for each project and remain subject to specifications from architects and contractors."
+  },
   "productCategories": [
     {
       "slug": "plastering",
@@ -504,6 +677,19 @@
     "familyCount": "5",
     "familyCountLabel": "Credential families",
     "holderLabel": "Certified entity"
+  },
+  "qualityCapability": {
+    "eyebrow": "Quality Infrastructure",
+    "title": "Evidence before claims.",
+    "description": "The quality story is organised as a connected chain: controlled production, laboratory verification, management systems and product-level credentials.",
+    "imageUrl": "./media/certifications/cic-green-product-ta328-preview.jpg",
+    "imageAlt": "CIC Green Product certification document for Optimix TA328",
+    "steps": [
+      { "index": "01", "title": "Control", "description": "Automated batching and documented manufacturing processes support material consistency." },
+      { "index": "02", "title": "Verify", "description": "Laboratory capability supports testing and evidence-led technical review." },
+      { "index": "03", "title": "Certify", "description": "Management, environmental and product credentials remain available as source documents." }
+    ],
+    "archiveLabel": "Browse the full credential register"
   },
   "credentialGroups": [
     {
@@ -1067,31 +1253,73 @@
   },
   "newsSection": {
     "eyebrow": "News & Events",
-    "title": "Latest from Optimix.",
-    "description": "Project partnerships, sustainability milestones and community initiatives.",
+    "title": "Progress, documented.",
+    "description": "Manufacturing milestones, industry dialogue and projects shaped by Optimix materials.",
     "ctaLabel": "View All News",
-    "ctaUrl": "https://www.optimix.com.hk/en/news"
+    "ctaUrl": "./news.html"
   },
   "news": [
     {
-      "slug": "in-one-low-carbon-healthy-community",
-      "date": "2026-07-29",
-      "title": "OPTIMIX Partners with IN ONE to Build a Low-Carbon, Healthy Community",
-      "url": "https://www.optimix.com.hk/news_detail/210/OPTIMIX-Partners-with-IN-ONE-to-Build-a-Low-Carbon%2C-Healthy-Community"
+      "slug": "zhuhai-green-factory-2026",
+      "date": "2026-09-10",
+      "category": "Manufacturing",
+      "title": "Optimix's Zhuhai Production Base Receives 2026 Zhuhai ‘Green Factory’ Verification",
+      "excerpt": "The verification recognises the Zhuhai production base's progress in sustainable and intelligent manufacturing.",
+      "imageUrl": "./media/news/zhuhai-green-factory-2026.jpg",
+      "imageAlt": "Optimix Zhuhai production base recognised as a Green Factory",
+      "url": "./news-detail.html?article=zhuhai-green-factory-2026",
+      "sourceUrl": "https://www.optimix.com.hk/en/news_detail/212/Optimix-Zhuhai-Green-Factory",
+      "lede": "Optimix's Zhuhai Green and Smart Production Base has been recognised as a 2026 Green Factory by the Zhuhai Industry and Information Technology Bureau.",
+      "body": [
+        "The municipal verification assesses intensive land use, safer raw materials, clean production, resource utilisation and low-carbon energy consumption. Optimix reports that the Zhuhai base was one of 18 enterprises selected across the city.",
+        "The Industry 4.0 facility combines automated production lines, computer-controlled batching, AGVs and a warehouse management system. Its on-site laboratory has also been recognised as a Standardised Laboratory for Ready-Mixed Mortar.",
+        "The base includes a 600 kW rooftop photovoltaic system and an energy management platform for monitoring water, electricity and gas. Optimix positions the verification as a further step in reducing the environmental impact of construction-material manufacturing."
+      ],
+      "highlights": ["2026 Zhuhai Green Factory", "300,000 t annual capacity reported for the base", "600 kW rooftop photovoltaic system"]
     },
     {
-      "slug": "carbon-awards-2026",
-      "date": "2026-06-29",
-      "title": "Optimix Honoured with the Carbon Awards 2026: Leading the Green Transformation",
-      "url": "https://www.optimix.com.hk/news_detail/206/Optimix-Honoured-with-the-Carbon-Awards-2026%3A-Leading-the-Green-Transformation"
+      "slug": "ray-wong-dialogue-2026",
+      "date": "2026-09-07",
+      "category": "Industry Dialogue",
+      "title": "Optimix Advances New Quality Productive Forces in Dialogue with The Hon Ray Wong Wing-wai, MH",
+      "excerpt": "A dialogue on innovation, advanced manufacturing and the next stage of construction materials.",
+      "imageUrl": "./media/news/ray-wong-dialogue-2026.jpg",
+      "imageAlt": "Optimix industry dialogue with The Hon Ray Wong Wing-wai",
+      "url": "./news-detail.html?article=ray-wong-dialogue-2026",
+      "sourceUrl": "https://www.optimix.com.hk/en/news_detail/213/Optimix-Advances-New-Quality-Productive-Forces-in-Dialogue-with-The-Hon-Ray-Wong-Wing-wai,-MH",
+      "lede": "The Hon Ray Wong Wing-wai, MH visited Optimix's Zhuhai Smart Manufacturing Plant for an exchange on advanced manufacturing and sustainable industrial development.",
+      "body": [
+        "The plant tour introduced Optimix's automated production lines, green-building features and approach to precision, consistency and productivity. CEO Calvin Chan led the visit and outlined the facility's operating model and long-term development direction.",
+        "The discussion covered industrial upgrading, digitalisation and possible applications of artificial intelligence in production and operational management.",
+        "Optimix describes the Zhuhai plant as part of a future-ready manufacturing model that combines technology investment, talent development and environmental responsibility."
+      ],
+      "highlights": ["Zhuhai Smart Manufacturing Plant", "Automation and digitalisation", "Industry dialogue on AI"]
     },
     {
-      "slug": "community-care-and-action",
-      "date": "2026-06-12",
-      "title": "Optimix Bringing Warmth to the Community Through Care and Action",
-      "url": "https://www.optimix.com.hk/news_detail/204/Optimix-Bringing-Warmth-to-the-Community-Through-Care-and-Action"
+      "slug": "qingyuan-hotel-2026",
+      "date": "2026-08-25",
+      "category": "Project Story",
+      "title": "New World Qingyuan Hotel: Creating a Natural Vacation Ambiance with Green Building Materials",
+      "excerpt": "Optimix material solutions support waterproofing, substrate preparation and tile installation across the hotel project.",
+      "imageUrl": "./media/news/qingyuan-hotel-2026.jpg",
+      "imageAlt": "New World Qingyuan Hotel completed interior",
+      "url": "./news-detail.html?article=qingyuan-hotel-2026",
+      "sourceUrl": "https://www.optimix.com.hk/en/news_detail/211/New-World-Qingyuan-Hotel:-Creating-a-Natural-Vacation-Ambiance-with-Green-Building-Materials",
+      "lede": "Optimix supplied a coordinated material solution for waterproofing, substrate preparation and tile installation at New World Qingyuan Hotel.",
+      "body": [
+        "The resort project uses Optimix products across bathrooms, washrooms, pantry zones and back-of-house areas where waterproofing and durability are central requirements.",
+        "TA328S tile adhesive and TG410ES tile grout were selected alongside BP138 base plaster and WP515 waterproofing slurry. The source article identifies environmental certifications held by the selected tiling products.",
+        "The case demonstrates how product selection can connect environmental objectives with maintainable wet-area and high-use construction details."
+      ],
+      "highlights": ["Hospitality project", "Waterproofing and substrate preparation", "Tile adhesive and grout system"]
     }
   ],
+  "newsDetailPage": {
+    "backLabel": "All News",
+    "sourceLabel": "View original company article",
+    "highlightsLabel": "At a glance",
+    "relatedLabel": "More from Optimix"
+  },
   "contact": {
     "location": "Hong Kong Headquarters",
     "officeLabel": "Hong Kong Office",
@@ -1174,7 +1402,9 @@
     "navigation": [
       { "label": "Home", "href": "./index.html" },
       { "label": "Products", "href": "./products.html" },
+      { "label": "Systems", "href": "./systems.html" },
       { "label": "Projects", "href": "./projects.html" },
+      { "label": "News", "href": "./news.html" },
       { "label": "Certifications", "href": "./certifications.html" },
       { "label": "Company", "href": "./company.html" }
     ],

@@ -91,6 +91,18 @@ Source paths beginning with `shared/` are relative to the WebA project root. Run
 - Source file: `shared/Hero01.mp4`
 - Derived still: `public/media/company/optimix-production-facility.jpg`
 - Transformation: Single frame extraction; visual content is otherwise unchanged
+- Current use: Retained as a historical derived asset; the active Company hero and manufacturing chapters now use the higher-resolution official-site references documented below.
+
+## Company official-site references
+
+- Status: Temporarily copied from the current public Optimix website for the client review prototype; files are stored locally and are not hotlinked.
+- Source page: `https://www.optimix.com.hk/en/news_detail/212/Optimix-Zhuhai-Green-Factory`.
+- Runtime files:
+  - `public/media/company/zhuhai-automated-production.jpg` from `https://www.optimix.com.hk/Product_Photo/images/Sequence%2001_00_38_45_20_Still011.jpg`.
+  - `public/media/company/zhuhai-green-environment.jpg` from `https://www.optimix.com.hk/Product_Photo/images/8%20%E7%B6%A0%E5%8C%96%E5%9C%92%E5%A2%83.jpg`.
+- Transformation: Resized to 2,400 px wide and exported as quality-90 JPEGs. Final dimensions are 2,400 × 1,350 and 2,400 × 1,600 respectively; composition was not otherwise altered.
+- Retrieval date: 2026-09-28.
+- Production action: Obtain approved original facility photography and written reuse confirmation from Optimix before formal publication.
 
 ## Company brochure facts
 
@@ -99,10 +111,29 @@ Source paths beginning with `shared/` are relative to the WebA project root. Run
 - Content used: Established in 2000; Dongguan and Zhuhai manufacturing facilities; 600,000 tonnes combined annual capacity; 120+ dry mortar formulations; ISO 9001, 14001, 45001, and 50001 management systems.
 - Production action: Client to approve wording and the use of rounded display figures before formal publication.
 
+## Homepage News references
+
+- Status: Temporarily copied from current public Optimix news articles for the client review prototype; files are stored locally and are not hotlinked.
+- Runtime files: `public/media/news/zhuhai-green-factory-2026.jpg`, `ray-wong-dialogue-2026.jpg`, and `qingyuan-hotel-2026.jpg`.
+- Source pages: Optimix news details 212, 213, and 211 respectively; the exact URLs remain recorded in `data/content.json`.
+- Original image URLs: `https://www.optimix.com.hk/Product_Photo/images/ZHUHAI-95.jpeg`, `https://www.optimix.com.hk/Product_Photo/images/1(16).jpg`, and `https://www.optimix.com.hk/Product_Photo/images/NWQYN_Destination-%E6%B8%85%E8%BF%9C%E6%96%B0%E4%B8%96%E7%95%8C%E9%85%92%E5%BA%97.jpg`.
+- Transformation: Large source images were resized to a maximum width of 2,000 px and exported as high-quality JPEGs; source composition was not altered.
+- Retrieval date: 2026-09-27.
+- Production action: Obtain approved press images or explicit reuse confirmation from Optimix before formal publication.
+
+## Application-system reference images
+
+- Status: Temporarily copied from the current public Optimix website for the client review prototype; the file is stored locally and is not hotlinked.
+- Runtime files: `public/media/systems/01-washroom-wet-area.png` through `09-mic-dfma.png`.
+- Source pages: Optimix application-system pages 1 through 9, covering Washroom & Wet Area, Roof & Exposed Area, Balcony, Basement & Underground Facility, Club House & Water Feature, Kitchen & Damp Area, Swimming Pool, Planter & Green Wall, and MiC & DfMA. Exact source URLs remain recorded in `data/content.json`.
+- Transformation: No intentional visual alteration. Seven PNGs retain the published 750 × 483 dimensions; the Balcony image retains 1,180 × 779 and the MiC & DfMA image retains 1,369 × 760.
+- Retrieval dates: 2026-09-27 to 2026-09-28.
+- Production action: Obtain the approved original system illustrations and public-use confirmation from Optimix before the formal website is released.
+
 ## Known source and quality gaps
 
 - The current Hero source is the supplied corporate film, not a stock placeholder, but an approved higher-resolution master is still preferred for production.
 - Earlier product/project previews remain document-derived. Official-site product references and newly supplied Daxing site records improve the Demo, but production originals and reuse confirmation are still required.
 - The Hufton+Crow and VCG Daxing images are deliberately not present in the public Demo because their promotional reuse rights are absent or unclear.
-- Approved system technical drawings have not been supplied and are not shown in the active page entries.
+- Approved original system technical drawings have not been supplied. All nine current official-site images are used temporarily in the active Systems overview/detail routes and still need approved production originals and reuse confirmation.
 - `shared/202304+珠海祥邦環保建材生產基地.pdf` is present as a client source file but is not referenced by the current active page data.

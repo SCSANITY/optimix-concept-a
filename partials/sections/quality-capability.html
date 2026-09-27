@@ -1,0 +1,23 @@
+<!--
+  CMS MAPPING
+  - Quality narrative -> Certifications Page fields
+  - Evidence chain -> ACF repeater: quality_steps
+  - Feature image -> WordPress featured media
+-->
+<section class="quality-capability bg-paper py-20 sm:py-24 lg:py-28" data-quality-capability>
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-stretch">
+      <div class="lg:col-span-5" data-reveal>
+        <p class="section-kicker"><span>01</span><span data-quality-eyebrow></span></p>
+        <h2 class="mt-5 max-w-[560px] font-heading text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-ink sm:text-5xl lg:text-6xl" data-quality-title></h2>
+        <p class="mt-7 max-w-[520px] text-lg leading-[1.72] text-ink/68" data-quality-description></p>
+        <a class="mt-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.13em] text-brand-blue hover:underline" href="#certifications"><span data-quality-archive-label></span><span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="quality-capability__visual relative min-h-[430px] overflow-hidden bg-mist lg:col-span-7" data-reveal>
+        <img class="absolute inset-0 h-full w-full object-cover object-top" data-quality-image alt="">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-deep-blue/88 p-5 text-[10px] font-semibold uppercase tracking-[0.15em] text-white/68 backdrop-blur-md">Source credential preview · Full documents remain in the register below</figcaption>
+      </figure>
+    </div>
+    <div class="mt-12 grid border-y border-ink/14 md:grid-cols-3" data-quality-steps data-reveal></div>
+  </div>
+</section>

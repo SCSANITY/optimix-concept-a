@@ -74,6 +74,6 @@ export function initHeader() {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1024) setMenuState(false);
+    if (window.innerWidth >= 1280) setMenuState(false);
   });
 }
